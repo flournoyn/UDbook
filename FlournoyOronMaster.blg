@@ -1,0 +1,26 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: FlournoyOronMaster.aux
+The style file: asa.bst
+Database file #1: NancyMaster3.bib
+I was expecting a `,' or a `}'---line 1015 of file NancyMaster3.bib
+ :    PUBLISHER = "Institute of Mathematical Statistics, eds. "
+ :                                                             N. Flournoy, W.F. Rosenberger, W.K. Wong",
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1931 of file NancyMaster3.bib
+ :    BOOKTITLE = "
+ :                 Applied Optimal Designs",
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 2647 of file NancyMaster3.bib
+ :   EDITOR ="Atkinson, A.C., Hackl, P., and M\"
+ :                                              {u}ller, W.G.",
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 9215 of file NancyMaster3.bib
+ : %@article{Hebb:Mitc:\textquotedblleft 
+ :                                       re:1972,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 9745 of file NancyMaster3.bib
+ : 
+ : @article{Ghos:disc:2004,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty institution in NIEH:NIH:2001
+(There were 5 error messages)
