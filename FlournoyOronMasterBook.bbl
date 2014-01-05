@@ -1,0 +1,380 @@
+\begin{thebibliography}{75}
+\newcommand{\enquote}[1]{``#1''}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Anderson et~al.(1946)Anderson, McCarthy, and
+  Tukey}]{Ande:McCa:Tuke:Stai:1946}
+Anderson, T.~W., McCarthy, P.~J., and Tukey, J.~W. (1946), \enquote{`Staircase'
+  method of sensitivity testing,} Naval Ordnance Report 65-46, Statistical
+  Research Group, Princeton University, Princeton, NJ, USA.
+
+\bibitem[{ASTM(1991)}]{ASTM:Stan:1991}
+ASTM (1991), \enquote{Standard test method for estimating acute oral toxicity
+  in rats,} \textit{American Society for Testing and Materials}, 1163--90.
+
+\bibitem[{Azriel(2012)}]{Azri:anot:2012}
+Azriel, D. (2012), \enquote{A note on the robustness of the continual
+  reassessment method.} \textit{Stat. Prob. Lett.}, 82, 902--–906.
+
+\bibitem[{Azriel et~al.(2011)Azriel, Mandel, and
+  Rinott}]{Azri:etal:imposs:2011}
+Azriel, D., Mandel, M., and Rinott, Y. (2011), \enquote{The Treatment Versus
+  Experimentation Dilemma in Dose Finding Studies,} \textit{J Stat. Plan.
+  Inf.}, 141, 2759--2768.
+
+\bibitem[{Babb et~al.(1998)Babb, Rogatko, Rogatko, and
+  Zacks}]{Babb:Roga:Roga:Zack:canc:1998}
+Babb, J., Rogatko, A., Rogatko, A., and Zacks, S. (1998), \enquote{Cancer Phase
+  {I} Clinical Trials: {E}fficient Dose Escalation with Overdose Control,}
+  \textit{Stat. Med.}, 17, 1103--1120.
+
+\bibitem[{Baldi~Antognini et~al.(2008)Baldi~Antognini, Bortot, and
+  Giovagnoli}]{Bald:Bort:Giov:2008}
+Baldi~Antognini, A., Bortot, P., and Giovagnoli, A. (2008), \enquote{Randomized
+  Group Up and Down Experiments,} \textit{Ann. Inst. Stat. Math.}, 60, 45--59.
+
+\bibitem[{Barlow et~al.(1972)Barlow, Bartholomew, Bremner, and
+  Brunk}]{BBBB:order:1972}
+Barlow, R.~E., Bartholomew, D.~J., Bremner, J.~M., and Brunk, H.~D. (1972),
+  \textit{Statistical Inference Under Order Restrictions}, John Wiley \& Sons.
+
+\bibitem[{Bortot and Giovagnoli(2005)}]{Bort:Giov:Upan:2005}
+Bortot, P. and Giovagnoli, A. (2005), \enquote{Up-and-down experiments of first
+  and second order,} \textit{J Stat. Plan. Inf.}, 134, 236--253.
+
+\bibitem[{Brownlee et~al.(1953)Brownlee, Hodges, and
+  Rosenblatt}]{BrownleeEtAl53}
+Brownlee, K.~A., Hodges, Jr., J., and Rosenblatt, M. (1953), \enquote{The
+  up-and-down method with small samples,} \textit{JASA}, 48, 262--277.
+
+\bibitem[{Camorcia et~al.(2004)Camorcia, Capogna, Lyons, and
+  Columb}]{Camo:Capo:Lyon:Colu:Epid:2004}
+Camorcia, M., Capogna, G., Lyons, G., and Columb, M. (2004), \enquote{Epidural
+  test dose with levobupivacaine and ropivacaine determination of {ED}50 motor
+  block after spinal administration,} \textit{Brit. J Anaesth.}, 92, 850--853.
+
+\bibitem[{Capogna et~al.(2001)Capogna, Parpaglioni, Lyons, Columb, and
+  Celleno}]{Capo:Parp:Lyon:Colu:Cell:Mini:2001}
+Capogna, G., Parpaglioni, R., Lyons, G., Columb, M., and Celleno, D. (2001),
+  \enquote{Minimum dose of epidural sufentanil for first-stage labor
+  analgesia,} \textit{Anesthesiology}, 94, 740--44.
+
+\bibitem[{Chao and Fuh(2001)}]{Chao:Fuh:boot:2001}
+Chao, M.~T. and Fuh, C.~D. (2001), \enquote{Bootstrap Methods for the up and
+  down Test on Pyrotechnics Sensitivity Analysis,} \textit{Statistica Sinica},
+  11, 1--21.
+
+\bibitem[{Cheung(2005)}]{Cheung:coherent:05}
+Cheung, Y.~K. (2005), \enquote{Coherence principles in dose-finding studies,}
+  \textit{Biometrika}, 92, 863--873.
+
+\bibitem[{Choi(1971)}]{Choi:est:1971}
+Choi, S. (1971), \enquote{An investigation of {W}etherill's method of
+  estimation for the up-and-down experiment,} \textit{Biometrics}, 27,
+  961--970.
+
+\bibitem[{Derman(1957)}]{Derm:Nonp:1957}
+Derman, C. (1957), \enquote{Non-parametric up-and-down experimentation,}
+  \textit{Ann. Math. Stat.}, 28, 795--798.
+
+\bibitem[{Diaconis and Stroock(1991)}]{Diac:Stro:geom:1991}
+Diaconis, P. and Stroock, D. (1991), \enquote{Geometric Bounds for Eigenvalues
+  of {M}arkov Chains,} \textit{Ann. App. Prob.}, 1, 36--61.
+
+\bibitem[{Dixon(1965)}]{Dixo:up-a:1965}
+Dixon, W.~J. (1965), \enquote{The Up-and-down Method for Small Samples,}
+  \textit{JASA}, 60, 967--978.
+
+\bibitem[{Dixon and Mood(1948)}]{Dixo:Mood:Amet:1948}
+Dixon, W.~J. and Mood, A. (1948), \enquote{A method for obtaining and analyzing
+  sensitivity data,} \textit{JASA}, 13, 109--126.
+
+\bibitem[{Durham and Flournoy(1994)}]{Durh:Flou:rand:1994}
+Durham, S.~D. and Flournoy, N. (1994), \enquote{Random Walks for Quantile
+  Estimation,} in \textit{Statistical Decision Theory and Related Topics, V},
+  eds. Gupta, S.~S. and Berger, J.~O., Springer-Verlag Inc., pp. 467--476.
+
+\bibitem[{Durham and Flournoy(1995)}]{Durh:Flou:up-a:1995}
+--- (1995), \enquote{Up-and-down Designs {I}: {S}tationary Treatment
+  Distributions,} in \textit{Adaptive Designs}, eds. Flournoy, N. and
+  Rosenberger, W.~F., Institute of Mathematical Statistics, pp. 139--157.
+
+\bibitem[{Durham et~al.(1993)Durham, Flournoy, and
+  Montazer-Haghighi}]{Durh:Flou:Mont:up-a:1993}
+Durham, S.~D., Flournoy, N., and Montazer-Haghighi, A.~A. (1993),
+  \enquote{Up-and-down Designs,} in \textit{Computing Science and Statistics.
+  Proceedings of the 25th Symposium on the Interface}, eds. Tarter, M.~E. and
+  Lock, M.~D., Interface Foundation of North America, pp. 375--384.
+
+\bibitem[{Durham et~al.(1995)Durham, Flournoy, and
+  Montazer-Haghighi}]{Durh:Flou:Mont:up-a:1995}
+--- (1995), \enquote{Up-and-down Designs {II}: {E}xact Treatment Moments,} in
+  \textit{Adaptive Designs}, eds. Flournoy, N. and Rosenberger, W.~F.,
+  Institute of Mathematical Statistics, pp. 158--178.
+
+\bibitem[{Durham et~al.(1997)Durham, Flournoy, and
+  Rosenberger}]{Durh:Flou:Rose:rand:1997}
+Durham, S.~D., Flournoy, N., and Rosenberger, W.~F. (1997), \enquote{A Random
+  Walk Rule for {P}hase {I} Clinical Trials,} \textit{Biometrics}, 53,
+  745--760.
+
+\bibitem[{Fedorov et~al.(2011)Fedorov, Flournoy, Wu, and
+  Zhang}]{Fedo:Flou:Wu:Zhang:Best:2011}
+Fedorov, V., Flournoy, N., Wu, Y., and Zhang, R. (2011), \enquote{Best
+  intention designs in dose-finding studies,} Tech. rep., Isaac Newton
+  Institute for the Mathematical Sciences, Cambridge, UK,
+  http://www.newton.ac.uk/preprints/NI11065.pdf.
+
+\bibitem[{Flournoy(1998)}]{Flou:aran:1998}
+Flournoy, N. (1998), \enquote{A biased coin urn design for estimating a target
+  quantile from a sequence of binary responses: asymptotic results,} in
+  \textit{Proceedings of the 20th International Conference on Information
+  Technology Interfaces}, eds. Kalpi\'{c}, D. and Dobri\'{c}, V.~H., SRCE
+  University Computing Centre, University of Zagreb, Croatia, pp. 13--18.
+
+\bibitem[{Flournoy et~al.(1995)Flournoy, Durham, and
+  Rosenberger}]{Flou:Durh:Rose:toxi:1995}
+Flournoy, N., Durham, S.~D., and Rosenberger, W.~F. (1995), \enquote{Toxicity
+  in Sequential Dose-response Experiments,} \textit{Sequential Analysis}, 14,
+  217--227.
+
+\bibitem[{Ford et~al.(1992)Ford, Torsney, and Wu}]{Ford:Tors:Wu:use:1992}
+Ford, I., Torsney, B., and Wu, C. F.~J. (1992), \enquote{The Use of a Canonical
+  Form in the Construction of Locally Optimal Designs for Non-linear Problems,}
+  \textit{Journal of the Royal Statistical Society, Series B: Methodological},
+  54, 569--583.
+
+\bibitem[{Frechet(1938)}]{Frec:1938}
+Frechet, M. (1938), \enquote{The'orie des 'ev'enements en chaine dans le cas
+  d'un nombre ¯ni d'etats possible,} \textit{Recherches th¶eoriques Modernes
+  sur le calcul des probabilit¶es}, 2.
+
+\bibitem[{Garc\`{\i}a-Perez(1998)}]{Garc:Pere:Forc:1998}
+Garc\`{\i}a-Perez, M.~A. (1998), \enquote{Forced-choice staircases with fixed
+  step sizes: asymptotic and small-sample properties,} \textit{Vision Res}, 38,
+  1861--1881.
+
+\bibitem[{Gezmu(1996)}]{Gezm:Geom:1996}
+Gezmu, M. (1996), \enquote{The geometric up-and-down design for allocating
+  dosage levels,} Ph.D. thesis, American University, Washington, DC.
+
+\bibitem[{Gezmu and Flournoy(2006)}]{Gezm:Flou:Grou:2006}
+Gezmu, M. and Flournoy, N. (2006), \enquote{Group up-and-down designs for
+  dose-finding,} \textit{J Stat. Plan. Inf.}, 136, 1749--1764.
+
+\bibitem[{Giovagnoli and Pintacuda(1998)}]{Giov:Pint:Pint:prop:1998}
+Giovagnoli, A. and Pintacuda, N. (1998), \enquote{Properties of Frequency
+  Distributions Induced by General `up-and-down' Methods for Estimating
+  Quantiles,} \textit{J Stat. Plan. Inf.}, 74, 51--63.
+
+\bibitem[{Goodman et~al.(1995)Goodman, Zahurak, and
+  Piantadosi}]{Good:Zahu:Pian:some:1995}
+Goodman, S.~N., Zahurak, M.~L., and Piantadosi, S. (1995), \enquote{Some
+  Practical Improvements in the Continual Reassessment Method for Phase {I}
+  Studies,} \textit{Stat. Med.}, 14, 1149--1161.
+
+\bibitem[{Hughes(1995)}]{Hugh:Rand:1995}
+Hughes, B.~D. (1995), \textit{Random Walks and Random Environments. {V}ol. 1},
+  Oxford Science Publications, New York: The Clarendon Press Oxford University
+  Press, random walks.
+
+\bibitem[{Ivanova(2006)}]{Ivan:esca:2006}
+Ivanova, A. (2006), \enquote{Escalation, Group and ${A} + {B}$ Designs for
+  Dose-finding Trials,} \textit{Stat. Med.}, 25, 3668--3678.
+
+\bibitem[{Ivanova et~al.(2007)Ivanova, Flournoy, and
+  Chung}]{Ivan:Flou:Chun:Cumu:2007}
+Ivanova, A., Flournoy, N., and Chung, Y. (2007), \enquote{Cumulative cohort
+  design for dose-finding,} \textit{J Stat. Plan. Inf.}, 137, 2316--2317.
+
+\bibitem[{Ivanova et~al.(2003)Ivanova, Montazer-Haghighi, Mohanty, and
+  Durham}]{Ivan:Mont:Moha:Durh:impr:2003}
+Ivanova, A., Montazer-Haghighi, A., Mohanty, S.~G., and Durham, S.~D. (2003),
+  \enquote{Improved Up-and-down Designs for Phase {I} Trials,} \textit{Stat.
+  Med.}, 22, 69--82.
+
+\bibitem[{JSME(1981)}]{JSME81}
+JSME (1981), \textit{Standard method of statistical fatigue testing}, Japan
+  Society of Mechanical Engineers, Japan, {JSME S} 002.
+
+\bibitem[{Kemeny and Snell(1960)}]{Keme:Snel:1960}
+Kemeny, J. and Snell, J. (1960), \textit{Finite Markov Chains}, Van Nostrand
+  Company Inc, Princeton.
+
+\bibitem[{Kpamegan and Flournoy(2001)}]{Kpam:Flou:opti:2001}
+Kpamegan, E. and Flournoy, N. (2001), \enquote{An optimizing up-and-down
+  design,} in \textit{Optimum Design 2000}, eds. Atkinson, A., Bogacka, B., and
+  Zhigljavsky, A., Dordrecht: Kluwer Academic Publishers, pp. 211--224.
+
+\bibitem[{Kpamegan and Flournoy(2008)}]{Kpam:Flou:opti:2008}
+--- (2008), \enquote{Up-and-{D}own Designs for Selecting the Dose with Maximum
+  Success Probability,} \textit{Seq. Design}, 27, 78--96.
+
+\bibitem[{Lagoda and Sonsino(2004)}]{Lago:Sons:Comp:2004}
+Lagoda, T. and Sonsino, C. (2004), \enquote{Comparison of different methods for
+  presenting variable amplitude loading fatigue results,} \textit{Mat. Wiss.
+  Werk.}, 35, 13--20.
+
+\bibitem[{Lee and Cheung(2009)}]{Lee:Cheu:interv:calibr:2009}
+Lee, S.~M. and Cheung, Y.~K. (2009), \enquote{Model Calibration in the
+  continual reassessment method,} \textit{Clinical Trials}, 6, 227--238.
+
+\bibitem[{Lichtman(1998)}]{Lich:updo:1998}
+Lichtman, A. (1998), \enquote{The up-down method substantially reduces the
+  number of animals required to determine antinociceptive {ED}50 values,}
+  \textit{J Pharm. Tox. Meth.}, 40, 81--85.
+
+\bibitem[{Lin and Shih(2001)}]{Lin:Shih:stat:2001}
+Lin, Y. and Shih, W.~J. (2001), \enquote{Statistical Properties of the
+  Traditional Algorithm-based Designs for Phase {I} Cancer Clinical Trials,}
+  \textit{Biostatistics (Oxford)}, 2, 203--215.
+
+\bibitem[{Mukerjee(1993)}]{Muke:1993}
+Mukerjee, H. (1993), \enquote{An improved monotone conditional quantile
+  estimator,} \textit{Annals of Statistics}, 21, 924--942.
+
+\bibitem[{Neuenschwander et~al.(2008)Neuenschwander, Branson, and
+  Gsponer}]{Neunsch08}
+Neuenschwander, B., Branson, M., and Gsponer, T. (2008), \enquote{Critical
+  aspects of the {B}ayesian approach to phase {I} cancer trials,} \textit{Stat.
+  Med.}, {27}, {2420--2439}.
+
+\bibitem[{NIEHS(2001)}]{NIEH:NIH:2001}
+NIEHS (2001), \enquote{The revised up-and-down procedure: A Test method for
+  Determining the Acute Oral Toxicity of Chemicals,} Tech. Rep. 2-4501,
+  WashingtonD.C.
+
+\bibitem[{OECD(1998)}]{OECD:Revi:1998}
+OECD (1998), \textit{The revised up-and-down procedure: A test method for
+  determining the acute oral toxicity of chemicals}, Organization for Economic
+  co-operation and development, Paris, France.
+
+\bibitem[{O'Quigley and Chevret(1991)}]{O'Qu:Chev:meth:1991}
+O'Quigley, J. and Chevret, S. (1991), \enquote{Methods for Dose Finding Studies
+  in Cancer Clinical Trials: {A} Review and Results of a {M}onte {C}arlo
+  Study,} \textit{Stat. Med.}, 10, 1647--1664.
+
+\bibitem[{O'Quigley et~al.(1990)O'Quigley, Pepe, and
+  Fisher}]{O'Qu:Pepe:Fish:cont:1990}
+O'Quigley, J., Pepe, M., and Fisher, L. (1990), \enquote{Continual Reassessment
+  Method: {A} Practical Design for {P}hase 1 Clinical Trials in Cancer,}
+  \textit{Biometrics}, 46, 33--48.
+
+\bibitem[{Oron(2007)}]{Oron07}
+Oron, A.~P. (2007), \enquote{Up-and-Down and the Percentile-Finding Problem,}
+  Ph.D. thesis, University of Washington, http://arxiv.org/abs/0808.3004.
+
+\bibitem[{Oron et~al.(2011)Oron, Azriel, and Hoff}]{oron:azri:hoff:dose:2011}
+Oron, A.~P., Azriel, D., and Hoff, P.~D. (2011), \enquote{Dose--finding
+  designs: The role of convergence properties.} \textit{Int. J Biostat.}, 7,
+  39.
+
+\bibitem[{Oron and Hoff(2009)}]{Oron:Hoff:thek:2009}
+Oron, A.~P. and Hoff, P.~D. (2009), \enquote{The k-in-a-row up-and-down design,
+  revisited,} \textit{Stat. Med.}, 28, 1805--1820.
+
+\bibitem[{Oron and Hoff(2013)}]{Oron:Hoff:smal:2013}
+--- (2013), \enquote{Small--sample behavior of novel {P}hase~{I} cancer trial
+  designs,} \textit{Clinical Trials}, 10, 63--80.
+
+\bibitem[{Pace and Stylianou(2007)}]{Pace:styl:tutor:2007}
+Pace, N.~L. and Stylianou, M.~P. (2007), \enquote{Advances in and Limitations
+  of Up-and-down Methodology: A Pr\'{e}cis of Clinical Use, Study Design, and
+  Dose Estimation in Anesthesia Research,} \textit{Anesthesiology}, 107,
+  144--152.
+
+\bibitem[{Peskun(1973)}]{Pesk:opti:1973}
+Peskun, P. (1973), \enquote{Optimum Monte-Carlo sampling using Markov chains,}
+  \textit{Biometrika}, 60, 607--612.
+
+\bibitem[{Reiner et~al.(1999)Reiner, Paoletti, and
+  O'Quigley}]{Rein:Paol:O'Qu:oper:1999}
+Reiner, E., Paoletti, X., and O'Quigley, J. (1999), \enquote{Operating
+  Characteristics of the Standard Phase {I} Clinical Trial Design,}
+  \textit{Comp. Stat. Data Anal.}, 30, 303--315.
+
+\bibitem[{Robbins and Monro(1951)}]{Robb:Monro:Asto:1951}
+Robbins, H. and Monro, S. (1951), \enquote{A stochastic approximation method,}
+  \textit{Ann. Math. Statistics}, 22, 400--407.
+
+\bibitem[{Rogatko et~al.(2007)Rogatko, Schoeneck, Jonas, Tighiouart, Khuri, and
+  Porter}]{Rogat:etal:oped:2007}
+Rogatko, A., Schoeneck, D., Jonas, W., Tighiouart, M., Khuri, F.~R., and
+  Porter, A. (2007), \enquote{Translation of innovative designs into phase {I}
+  trials,} \textit{J Clin Oncol}, {25}, {4982--4986}.
+
+\bibitem[{Rosenberger et~al.(1997)Rosenberger, Flournoy, and
+  Durham}]{Rose:Flou:Durh:asym:1997}
+Rosenberger, W.~F., Flournoy, N., and Durham, S.~D. (1997), \enquote{Asymptotic
+  Normality of Maximum Likelihood Estimators from Multiparameter
+  Response-driven Designs,} \textit{J Stat. Plan. Inf.}, 60, 69--76.
+
+\bibitem[{Stylianou and Flournoy(2002)}]{Styl:Flou:dose:2002}
+Stylianou, M. and Flournoy, N. (2002), \enquote{Dose Finding Using the Biased
+  Coin Up-and-down Design and Isotonic Regression,} \textit{Biometrics}, 58,
+  171--177.
+
+\bibitem[{Stylianou et~al.(2003)Stylianou, Proschan, and
+  Flournoy}]{Styl:Pros:Flou:esti:2003}
+Stylianou, M., Proschan, M., and Flournoy, N. (2003), \enquote{Estimating the
+  Probability of Toxicity at the Target Dose Following an Up-and-down Design,}
+  \textit{Stat. Med.}, 22, 535--543.
+
+\bibitem[{Sunderam et~al.(2004)Sunderam, Patra, Julli,
+  et~al.}]{Sund:Patr:Jull:Warn:Use:2004}
+Sunderam, R.~M., Patra, R., Julli, M., et~al. (2004), \enquote{Use of the
+  up-and-down acute toxicity test procedure to generate {LC}50 data for fish,}
+  \textit{Bull. Envir. Contam. Tox.}, 72, 873--880.
+
+\bibitem[{Sweeney et~al.(2010)Sweeney, Cui, Solomon,
+  et~al.}]{Sween:etal:canines:2010}
+Sweeney, D., Cui, X., Solomon, S., et~al. (2010), \enquote{Anthrax lethal and
+  edema toxins produce different patterns of cardiovascular and renal
+  dysfunction and synergistically decrease survival in canines,} \textit{J
+  Infect. Dis.}, 202, 1885--1896.
+
+\bibitem[{Treutwein(1995)}]{Treu:Mini:1995}
+Treutwein, B. (1995), \enquote{Minireview: adaptive psychophysical procedures,}
+  \textit{Vision Res.}, 35, 2503--2522.
+
+\bibitem[{Tsutakawa(1967{\natexlab{a}})}]{Tsut:asym:1967}
+Tsutakawa, R.~K. (1967{\natexlab{a}}), \enquote{Asymptotic Properties of the
+  Block Up-and-down Method in Bio-assay,} \textit{Ann. Math. Stat.}, 38,
+  1822--1828.
+
+\bibitem[{Tsutakawa(1967{\natexlab{b}})}]{Tsut:rand:1967}
+--- (1967{\natexlab{b}}), \enquote{Random Walk Design in Bio-assay,}
+  \textit{JASA}, 62, 842--856.
+
+\bibitem[{von B\'{e}k\'{e}sy(1947)}]{vonB:anew:1947}
+von B\'{e}k\'{e}sy, G. (1947), \enquote{A new audiometer,} \textit{Acta
+  Oto.Laryn.}, 35, 411--422.
+
+\bibitem[{Weiss(1994)}]{Weiss:Aspe:1994}
+Weiss, G.~H. (1994), \textit{Aspects and applications of the random walk
+  (Random Materials and Processes)}, Amsterdam: North-Holland Publishing
+  Company.
+
+\bibitem[{Wetherill(1963)}]{Weth:Sequ:1963}
+Wetherill, G.~B. (1963), \enquote{Sequential estimation of quantal response
+  curves,} \textit{J Roy. Stat. Soc. B}, 25, 1--48.
+
+\bibitem[{Wetherill et~al.(1966)Wetherill, Chen, and
+  Vasudeva}]{Weth:Chen:Vasu:est:1966}
+Wetherill, G.~B., Chen, H., and Vasudeva, R.~B. (1966), \enquote{Sequential
+  estimation of quantal response curves: {A} new method of estimation,}
+  \textit{Biometrika}, 53, 439--454.
+
+\bibitem[{Wetherill and Levitt(1966)}]{Weth:Levi:Sequ:1966}
+Wetherill, G.~B. and Levitt, H. (1966), \enquote{Sequential estimation of on a
+  psychometric function,} \textit{Brit. J Math. Stat. Psych.}, 18, 1--10.
+
+\bibitem[{Wright(1984)}]{Wright:1984}
+Wright, F.~T. (1984), \enquote{The asymptotic behavior of monotone percentile
+  regression estimates,} \textit{Canadian Journal of Statistics}, 12, 229--236.
+
+\bibitem[{Zacks(2009)}]{Zack:stag:2009}
+Zacks, S. (2009), \textit{Stage--wise Adaptive Designs}, John Wiley \& Sons,
+  Inc.
+
+\end{thebibliography}
