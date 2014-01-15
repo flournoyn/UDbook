@@ -343,7 +343,7 @@ as $n\rightarrow \infty$ where $\sigma^2_j=2\pi_jz_{jj}-\pi_j-\pi_n^2$ and $z_{j
 \cite{Frec:1938} used the so called \textit{fundamental
 matrix} $\mathbf{Z}$ to avoid the use of
 eigenvalues in expressing the limiting variance of a Markov chain.
- \citep[see also][get citation for the new edition]{Keme:Snel:1960} \citep(insert citation for Grinstead \& Snell Chapter 11, pg 464).
+ \citep[see also Chapter 11, pg 464]{Grin:Snel:Intr:1997}.
  
  Since software is now readily available for calculating eigenvalues, we also provide
  an
@@ -458,11 +458,11 @@ n\tilde{\mathbf{w}}(n)&=\bf{I}+\mathbf{P}\tilde{\mathbf{w}}(n-2)
 \end{align*}
 where $\mathbf{I}$ is the identity matrix.
 
-\subsection{The Variance of a Dose-Allocation Frequency}\label{sec:allocationvariances}
+\subsection{The Variance of a Dose Allocation Frequency}\label{sec:allocationvariances}
 We show in section (\ref{sec:allocationcov}) that  when $X_1$ is
 fixed at $d_i$, the variance of the dose-allocation frequency at level $k$, after the $n$th allocation,   is given by
 \begin{align*}
-n^2\textrm{Var}_i\left[W_k(n)\right]
+n^2\ \textrm{Var}_i\left[W_k(n)\right]
 =\sum_{s=1}^np_{kk}(t)\left(\delta_{kk}-p_{ik}(t)\right)
 +
 2\sum_{s>t} p_{kk}(s-t)p_{ik}(t)-p_{ik}(s)p_{ik}(t),\\
@@ -479,20 +479,23 @@ $n^2\textrm{Var}_{\mathbf{p}}\left[W_k(n)\right]$
 +2\sum_{s>t}^n p_{kk}(s-t)p_{ik}(t)-\displaystyle\sum_{i=1}^Kp_{ik}(s)p_{ik}(t)p_i(1).
 \end{equation*}
 
-\subsection{Mean Recurrence Times}
+\subsection{First Allocation and Mean Recurrence Times}
 Given a subject is allocated to dose  $d_k$, the recurrence time  is the number of subjects allocated before another subject is allocated to $d_k$.  We know the asymptotic allocation distribution is unimodal.  But these times help gauge how often excursions into the tails of the distribution are likely to occur.   Also, if one starts allocations at the lowest (highest) dose, the mean recurrence times indicate how long it will take the allocation process to reach, say, the middle or the far edge of the dose space.  
 
-Let  $\mathbf{M}=(m_{kl})$ denote the matrix of recurrence times.  Then $m_{kl}=\frac{z_{jj}-z_{ij}}{\pi_j}$.
+Suppose a subject has just been allocated to dose $d_k$, and let  $m_{kl}$ denote the mean number of subjects allocated until dose $d_k$ is allocated again.  
+Then $$m_{kl}=\frac{z_{jj}-z_{ij}}{\pi_j},\, k\ne l.$$
+Suppose again that a subject has just been allocated to dose $d_k$, and let $r_k$ denote the mean number of subjects is takes for the dose allocation process to return to dose $d_k$.  Then $$r_k=\frac{1}{\pi_k}. $$
+{See Chapter 11, Theorems 11.15 and 11.6}\cite{Grin:Snel:Intr:1997}.
 
-{bf give example}
+{bf give example of analyzing the effect of starting at lowest dose, perhaps for different densities of dose levels and/or different slopes of F}
 
 \subsection{ A Graphical Tool for Determining when {\em n} is Large Enough for Asymptotic Approximations}
-The matrix
-\begin{equation*}
- \mathbf{Z}=\left(z_{ik}\right)=\left({\mathbf{I}}+\left({\mathbf{P}}
- -\boldsymbol{\Pi}\right)\right)^{-1}
-\end{equation*}
-is called the \emph{fundamental matrix for regular Markov chains}.  We show below that
+{\bf This section needs to be rewritten:}
+
+Recall the fundamental matrix for regular Markov chains:
+ $\mathbf{Z}=\left(z_{ik}\right)=\left({\mathbf{I}}+\left({\mathbf{P}}
+ -\boldsymbol{\Pi}\right)\right)^{-1}$.
+  We show below that
 when starting from any particular level, say $i$,
 $$n\mathrm{E}_{\mathbf{p}}\left[W_k(n)\right]-nw_k \ \ \stackrel{\textrm{as } n
 \rightarrow \infty}\longrightarrow\ \ z_{ik}-w_k. $$
