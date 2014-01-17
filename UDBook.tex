@@ -18,7 +18,7 @@
 
 Up-and-down (UD) dose-finding designs are used extensively in a variety of scientific and engineering fields. The first technical documents describing UD designs date to the 1940's, and involve military explosive testing to find the optimal height from which to drop a bomb  \citep{Ande:McCa:Tuke:Stai:1946,Dixo:Mood:Amet:1948}, and hearing-threshold determination \citep{vonB:anew:1947}. In both of these applications, UD designs are still the method of choice. Other common UD applications include failure-threshold determination in electrical and material engineering \citep{Lago:Sons:Comp:2004}, and finding the median effective dose (ED$_{50}$) in anesthesiology \citep{Pace:styl:tutor:2007}. As these examples suggest, ``dose-finding'' is a general term to describe experiments whose outcomes are binary (``yes/no''), conducted to find the treatment that would trigger a ``yes'' response at a pre-specified frequency. UD procedures comprise a family of \emph{sequential} dose-finding designs, meaning that treatments are ordered in time, and each treatment (except the first one) is determined by previous outcomes rather than being predetermined before the experiment's start.
 
-In numerous applications, UD designs are a standard method \citep[e.g.,][]{JSME81, ASTM:Stan:1991,OECD:Revi:1998,NIEH:NIH:2001}. Prominent among these are animal toxicity studies, which attempt to estimate the median lethal dose (LD$_{50}$) of various toxins while sacrificing as few animals as possible. Toxicity is also the outcome of interest in first-in-human (Phase~I) clinical trials, which are dose-finding experiments attracting considerable methodological attention and innovation. The most popular Phase~I design in current use is superficially related to UD, and is often confounded with it. More generally UD plays an important role in the statistical debate regarding Phase~I design choices.
+In numerous applications, UD designs are a standard method \citep[e.g.,][]{JSME81, ASTM:Stan:1991,OECD:Revi:1998,NIEH:NIH:2001}. Prominent among these are animal toxicity studies, which attempt to estimate the median lethal dose (LD$_{50}$) of various toxins while sacrificing as few animals as possible. Toxicity is also the outcome of interest in first-in-human (Phase~I) clinical trials, which are dose-finding experiments attracting considerable methodological attention and innovation. The most popular Phase~I design in current use is superficially related to UD, and is often confounded with it. More generally, UD plays an important role in the statistical debate regarding Phase~I design choices.
 
 One obstacle to the proliferation of UD usage and best practices has been the lack of standard references, such as exist for statistical methods of comparable popularity.  In this chapter we attempt to provide a condensed version of such a standard reference, presenting an unprecedented compilation of UD methodological knowledge. The presentation is closer to a textbook than a review article. This includes the definition of numerous terms we deem crucial to the understanding and proper use of UD designs.
 
@@ -91,7 +91,7 @@ The toxicity rate at $x^*$ will be denoted $F^*$, i.e., $F(x^*)=F^*$.
 %
 The dual monotonicity condition in Definition~\ref{def:targ} - in words, as the dose increases, the `up' probability goes down while the `down' probability goes up --  will be referred to as \emph{the Durham-Flournoy conditions}, after the first study to specify them in generic form \citep{Durh:Flou:rand:1994,Durh:Flou:up-a:1995}. As shown below in Theorem~\ref{thm:mode}, designs that meet these conditions generate a central tendency around their balance point.
 
-In UD experiments, one would like the center of the dose-allocation distribution to be close to the experiment's designated target quantile $F^{-1}(\Gamma)$. This can be accomplished by judicious selection of design parameters, so that  $\Gamma\approx F^*\equiv F(x^*)$.  An illustration $p(x),q(x)$ and the balance point is shown in Figure~\ref{fig:pq} for both the UD design and a BCD design that is defined in Section \ref{sec:bcd}.
+In UD experiments, $x^*$ usually is not one of the doses in $\mathcal{X}$, but falls between two of the designs' doses; and one would like the center of the dose-allocation distribution to be close to the experiment's designated target quantile $F^{-1}(\Gamma)$. This can be accomplished by judicious selection of design parameters, so that  $\Gamma\approx F^*\equiv F(x^*)$.  An illustration of $p(x),q(x)$ and the balance point is shown in Figure~\ref{fig:pq} for both the classical UD design and a BCD design that is defined in Section \ref{sec:bcd}.
 %
 \begin{figure}
 \begin{center}
@@ -115,7 +115,7 @@ d_{m+1} &\textrm{if $Y_i=0$};\\
 d_{m-1} &\textrm{if $Y_i=1$};\\
 \end{cases}
 \end{equation*}
-for $j=2,\ldots,M-1$. In words, the experiment moves \emph{up} one level following a non-toxicity, and \emph{down} one level following a toxicity; hence the name \emph{up-and-down}. On the boundaries of $\mathcal{X}$, replace $d_0$ with $d_1$ whenever the former is mandated, and similarly replace $d_{M+1}$ with $d_M$ (i.e., the experiment stays on the boundary rather than venture outside it, which is impossible by design). Subsequently, boundary conditions are omitted since they always follow this basic adjustment.
+for $m=2,\ldots,M-1$. In words, the experiment moves \emph{up} one level following a non-toxicity, and \emph{down} one level following a toxicity; hence the name \emph{up-and-down}. On the boundaries of $\mathcal{X}$, replace $d_0$ with $d_1$ whenever the former is mandated, and similarly replace $d_{M+1}$ with $d_M$ (i.e., the experiment stays on the boundary rather than venture outside it, which is impossible by design). Subsequently, boundary conditions are omitted since they always follow this basic adjustment.
 
 The classical UD remains the most commonly used UD design. In the interior of $\mathcal{X}$ it leads to the following transition probabilities:
 
@@ -188,6 +188,26 @@ Given a desired toxicity rate $\Gamma$, the BCD balance point can made identical
 
 The conditioning of dose escalation upon the outcome of a random draw in addition to a non-toxicity, keeps experimental trajectories at lower doses, on average, than the classical UD design does. In Figure~\ref{fig:traject} (bottom row), each BCD ``run'' with $b=1/3$ (i.e., $F^*=0.25$) uses exactly the same toxicity thresholds as the classical UD trajectory (i.e., $F^*=0.50$) shown immediately above it in the top row (all drawn randomly from a Gamma distribution). While the classical UD design runs escalate rather easily to the upper half of the $M=8$ dose range, the BCD runs are confined mostly to the bottom half.
 
+\cite{Durh:Flou:rand:1994} also presented the \emph{reflected biased coin design} (RBCD) for estimating quantiles with toxicity rates greater than 0.05, as are typical for studies of efficacy rather than toxicity: Given $X_i=d_m$, the next dose allocation will be
+
+\begin{equation}\label{eq:DF_RBCD}
+X_{i+1}=
+\begin{cases}
+d_{m+1} &\textrm{if $Y_i=0$ };\\
+d_{m-1} &\textrm{if $Y_i=1$ \& `heads'};\\
+d_m &\textrm{if $Y_i=0$ \& `tails'}.\\
+\end{cases}
+\end{equation}
+
+The `heads' probability $b$ again can take any value in $[0,1]$. So the balance point for the RBCD is given by
+\begin{equation}\label{eq:rbcdx*}
+\begin{array}{rcl}
+    b\left(F^*\right) &=& 1-F^*\\
+    F^* &=& \frac{1}{1+b}\in[0.5,1.0].
+\end{array}
+\end{equation}
+%
+
 \section{The Asymptotic Dose--Allocation Distribution}\label{sec:pi}
 
 Because UD sequences of assigned doses $x_1,\ldots,x_n$ possess the properties of a Markov chain, as $n\to\infty$ the relative proportions of subjects assigned to each dose in $\mathcal{X}$ approach the \emph{asymptotic} or \emph{stationary allocation distribution} $\boldsymbol{\pi}=\left(\pi_1,\ldots,\pi_M\right)^{\prime};\ \ \sum_m \pi_m=1.$  If $\mathbf{P}$ is regular, then $\pi_m>0\ \forall m$. The distribution $\boldsymbol{\pi}$ can be found by solving the $M$ \emph{balance equations}, which is greatly simplified by the tri-diagonal structure of $\mathbf{P}$ for first-order UD designs (\ref{eq:genericPmat}):
@@ -209,10 +229,10 @@ and Classical Up--and--Down Designs}
 
 For the BCD, calculation of the adjacent-level ratio $\lambda_m$ is straightforward:
 \begin{equation}\label{eq:BCDlambda}
-\lambda_m=\frac{p_{m,m+1}}{p_{m+1,m}}=\frac{b\left(1-F(d_m)\right)}{F(d_{m+1})}.
+\lambda_m=\frac{p_{m,m+1}}{p_{m+1,m}}=\frac{F^*}{\left(1-F^*\right)}\frac{\left(1-F(d_m)\right)}{F(d_{m+1})}.
 \end{equation}
-
-\noindent The numerator is monotone decreasing in $m$ while the denominator is increasing, and therefore, $\lambda_m$ as a whole is monotone decreasing. The doses for which $\{\lambda_m\}$ straddle unity bound the balance point $x^*$.
+The same ratio is obtained for the RBCD.
+ The numerator is monotone decreasing in $m$ while the denominator is increasing, and therefore, $\lambda_m$ as a whole is monotone decreasing. The doses for which $\{\lambda_m\}$ straddle unity bound the balance point $x^*$.
 
 Interestingly, the classical UD presents a somewhat nonstandard asymptotic allocation distribution. Since $p_{mm}=0$ except on the boundaries, classical UD Markov chains are \emph{quasiperiodical}. For example, suppose the experiment begins at $d_5$, and $M=10$; then for subjects with an odd index $i$ the allocated dose level $m$ will be odd, and vice versa -- unless and until the trajectory hits upon a boundary and remains there for two consecutive subjects. If the design had no boundaries, then the chain would be purely periodical with a period of 2, yielding two non-communicating stationary distributions $\boldsymbol{\pi}^{(odd)},\boldsymbol{\pi}^{(even)}$. With finite $\mathcal{X}$, the classical UD design has a single $\boldsymbol{\pi}$ with the monotone decreasing adjacent-level ratio $\lambda_m=\left(1-F(d_m)\right)/F(d_{m+1})$.
 
@@ -250,7 +270,8 @@ Versions of Theorem~\ref{thm:mode} in varying degrees of generality, have appear
 
 Whether the asymptotic mode is in fact on the single closest level to $x^*$ depends upon the design, and upon how ``closest'' is defined. Defining ``closeness'' on the toxicity-frequency ($F$) scale, rather than on the dose ($x$) scale, is generally more useful. For example, the following property was proven for the classical UD:
 %
-\begin{thm}\label{thm:modesud}\citep{Oron:Hoff:thek:2009}
+\begin{thm}\label{thm:modesud}
+\citep{Oron:Hoff:thek:2009}
 For the classical UD design, $\boldsymbol{\pi}$'s mode is at the level whose toxicity rate is closest to $0.5$.
 \end{thm}
 \begin{proof} Let $x^*=F^{-1}(0.5)\in [d_{m^*},d_{m^*+1}]$. Write $F\left(d_{m^*}\right)=0.5-\Delta p_1$ and $F\left(d_{m^*+1}\right)=0.5+\Delta p_2$, where $\Delta p_1\geq 0$ and $\Delta p_2\geq 0$. Then the adjacent-level ratio (\ref{eq:balance_solution}) at level $m^*$ can be written as
@@ -267,7 +288,13 @@ For the BCD, the mode is not necessarily the dose closest to the target. Let $x^
 %
 \noindent This adjacent-level ratio is greater than 1 if and only if $\Delta p_1/\Delta p_2>(1-\Gamma)/\Gamma$. For example, if $\Gamma=1/4$ and $x^*\in\left[d_2,d_3\right]$, then the asymptotic mode will be at $d_2$ unless $F\left(d_3\right)$ is 3 times closer to $1/4$ than $F\left(d_2\right)$. This means that the BCD's dose-allocation behavior is somewhat more conservative (i.e., less amenable to dose escalation) than indicated by its nominal target toxicity rate.
 
-\subsection{A Special Case When the Dose--Toxicity Function is Logistic}
+\subsection{Sharpness of the Asymptotic Dose--Allocation Distribution}
+
+The unimodality of $\boldsymbol{\pi}$ helps concentrate information collection around $x^*$. It is also of practical interest to know how steeply $\boldsymbol{\pi}$ decreases to either side of its mode, in order to know the degree of this concentration and the frequency of excursions away from $x^*$. Assume without loss of generality, that the mode is at a single interior level $d_{m^*}$. Due to monotonicity conditions, we know that $\lambda_{m^*-1}>1$ and $\lambda_{m^*}<1$. If the adjacent-level ratios remained constant at these values on either side of the mode, then the rate of decrease in $\boldsymbol{\pi}$ values away from the mode would be geometric -- the discrete analogue of exponentially-decreasing tails. However, due to their monotonicity, the $\lambda$'s become \emph{more} extreme as one moves away from the mode. Hence, the drop in asymptotic allocation frequencies away from $\boldsymbol{\pi}$'s mode is faster than geometric for UD designs.
+
+
+\section{Characteristics of the Durham--Flournoy Biased Coin Design When the Dose--Toxicity Function is Logistic}\label{sec:logistic}
+\section{The Asymptotic Dose--Allocation Distribution}
 \cite{Durh:Flou:rand:1994} obtained a valuable result (shown in Theorem~\ref{thm:discnormal} below) regarding the form of the BCD's $\boldsymbol{\pi}$ and the steepness of this decrease away from the mode. This result requires the following definition:
 \begin{defn}
 Let $Z$ be a random variable that is defined on a set of discrete
@@ -277,24 +304,84 @@ real valued points $\mathcal{X}$.  Let $\tilde{\Phi}(z)$ denote $P\{Z=z\}$.  The
 \end{equation*}
 \end{defn}
 \begin{thm}\label{thm:discnormal}
-Assume that subjects' toxicity thresholds are logistically distributed, with $$1-F(x)=(1+\exp(\mu+\sigma x))^{-1,}\ \ \sigma>0,$$ and that the doses are equally spaced: $\mathcal{X}=\{d_1<d_1+\Delta,d_1+2\Delta<\cdots<d_1+(M-1)\Delta\}.$ Then the BCD's asymptotic allocation distribution is a mixture of two discrete normal distributions over $\mathcal{X}$,  for which the mixing parameter is the target toxicity rate $\Gamma$, that is,
+Assume that subjects' toxicity thresholds are logistically distributed, with $$1-F(x)=(1+\exp(\mu+\tau x))^{-1,}\ \ \tau>0,$$ and that the doses are equally spaced: $\mathcal{X}=\{d_1<d_1+\Delta,d_1+2\Delta<\cdots<d_1+(M-1)\Delta\}.$ Then the BCD and the RBC have the same asymptotic allocation distribution, which is a mixture of two discrete normal distributions over $\mathcal{X}$,  and  the mixing parameter is the target toxicity rate $\Gamma$, that is,
 %
 \begin{equation}\label{eq:discnormal}
-\pi_m=(1-\Gamma)\tilde{\Phi}\left(\frac{d_m-(x^*-0.5\Delta)}{\sqrt{\Delta/\sigma}}\right)+
-\Gamma\tilde{\Phi}\left(\frac{d_m-(x^*+0.5\Delta)}{\sqrt{\Delta/\sigma}}\right),\ \ d_m\in\mathcal{X}.
+\pi_m=(1-\Gamma)\tilde{\Phi}\left(\frac{d_m-(x^*-0.5\Delta)}{\sqrt{\Delta/\tau}}\right)+
+\Gamma\tilde{\Phi}\left(\frac{d_m-(x^*+0.5\Delta)}{\sqrt{\Delta/\tau}}\right),\ \ d_m\in\mathcal{X}.
 \end{equation}
 \end{thm}
 %
-See \cite{Durh:Flou:rand:1994} for the complete proof. The modes of the two discrete normal distributions are separated by one dose spacing unit $\Delta$, so they have considerable overlap. The first (second) component of (\ref{eq:discnormal}) is the asymptotic allocation distribution for subjects with non-toxic (toxic) responses. If $\Gamma=0.5$, i.e., the design is the classical UD procedure, the mixture is equally weighted and, as shown in more generality in Theorem~\ref{thm:modesud}, the asymptotic mode will be on the dose whose toxicity rate is closest to $0.5$. Conversely, as $\Gamma\to 0$ the first component will dominate, shifting the asymptotic mode as far as $\Delta/2$ downwards.
+See section \ref{sec:logitproofs} and \cite{Durh:Flou:rand:1994} for the proof.
 
+The modes of the two discrete normal distributions are separated by one dose spacing unit $\Delta$, so they have considerable overlap. If $\Gamma=0.5$, i.e., the design is the classical UD procedure, the mixture is equally weighted and, as shown in more generality in Theorem~\ref{thm:modesud}, the asymptotic mode will be on the dose whose toxicity rate is closest to $0.5$. Conversely, as $\Gamma\to 0$ the first component will dominate, shifting the asymptotic mode as far as $\Delta/2$ downwards.
+
+Despite the specific parametric assumptions on $F$,  (\ref{eq:discnormal}) provides a useful guideline about the stationary frequency of BCD excursions, because many common response function models are very similar except on the extreme tails, and because (as will be shown later) several common UD designs produce $\boldsymbol{\pi}$s at least as sharp as those of the BCD.
+
+Under the assumptions of Theorem~\ref{thm:discnormal}, roughly 97.5\% of the allocations will be within $x^*\pm 2\sqrt{\Delta/\tau}$.  This approximation can be used to choose $\Delta$ so as to control for highly toxic events, given approximate prior knowledge of the dispersion parameter $\sigma$ \citep{Durh:Flou:Rose:rand:1997}.
+
+The following theorem asserts that the first and second components of (\ref{eq:discnormal}) are the asymptotic allocation distribution for subjects with non-toxic and toxic responses, respectively.  The proof is in section~\ref{sec:logitproofs}.
+\begin{thm}\label{thm:logitpi|y}
+Allocated doses according to BCD or RBCD under the assumptions of Theorem~\ref{eq:discnormal}, then
+\begin{equation}
+\pi_m=(1-\Gamma)P(X_n=d_m|Y_n=0)+\Gamma P(X_n=d_m|Y_n=1).
+\end{equation}
+\end{thm}
+ %
+
+
+\subsection{Illustrations}
 {\bf Assaf: insert redo of allocation histograms separately, with side by side bars, for toxicities and non-toxicity - this would require redo of prior histogram assuming logistics F.  Otherwise, have overall figure and side by side bars side by side for comparison.  Let's talk about this. it would be nice to have enough levels that the normality shape appears.}
 
-Despite the specific parametric assumptions on $F$,  (\ref{eq:discnormal}) provides a useful guideline about the stationary frequency of BCD excursions, because many common response function models are very similar except on the extreme tails, and because (as will be shown later) several common UD designs produce $\boldsymbol{\pi}$s at least as sharp as those of the BCD. Under the assumptions of Theorem~\ref{thm:discnormal}, roughly 97.5\% of the allocations will be within $x^*\pm 2\sqrt{\Delta/\sigma}$.  This approximation can be used to choose $\Delta$ so as to control for highly toxic events, given approximate prior knowledge of the dispersion parameter $\sigma$ \citep{Durh:Flou:Rose:rand:1997}.
 
-\subsection{Sharpness of the Asymptotic Dose--Allocation Distribution}
 
-The unimodality of $\boldsymbol{\pi}$ helps concentrate information collection around $x^*$. It is also of practical interest to know how steeply $\boldsymbol{\pi}$ decreases to either side of its mode, in order to know the degree of this concentration and the frequency of excursions away from $x^*$. Assume without loss of generality, that the mode is at a single interior level $d_{m^*}$. Due to monotonicity conditions, we know that $\lambda_{m^*-1}>1$ and $\lambda_{m^*}<1$. If the adjacent-level ratios remained constant at these values on either side of the mode, then the rate of decrease in $\boldsymbol{\pi}$ values away from the mode would be geometric -- the discrete analogue of exponentially-decreasing tails. However, due to their monotonicity, the $\lambda$'s become \emph{more} extreme as one moves away from the mode. Hence, the drop in asymptotic allocation frequencies away from $\boldsymbol{\pi}$'s mode is faster than geometric for UD designs.
+\subsection{Proofs of Theorems~\ref{thm:discnormal} and \ref{thm:logitpi|y}}\label{sec:logitproofs}
+\subsubsection{Proof of Theorem~\ref{thm:discnormal}}
+The BCD and RBCD have identical adjacent-level ratios~(\ref{eq:BCDlambda}) which, given logistic toxicity rates, are
+\begin{align*}
+\lambda_m&=\frac{p_{m,m+1}}{p_{m+1,m}}
+=\frac{\Gamma }{(1-\Gamma)}\frac{(1-F_m)}{F_{m+1}}
+\\&=exp\left(\mu+\tau x^*\right)\frac{1}{1+exp\left(\mu+\tau x_m\right)}\, 
+\frac{1+exp\left(\mu+\tau x_{m+1}\right)}{exp\left(\mu+\tau x_{m+1}\right)}, \ m=1,\ldots,M-1.
+\end{align*} 
+Noting that $x_m=(m-1)\Delta$, the stationary dose-allocation probabilities can be written as
+\begin{align*}\label{eq:BCDpilogit}
+\pi_{m}=\prod_{j=1}^m \lambda_j &= \lambda_1 \frac{exp(k (\mu+\tau x^*))}{1+exp\left(\mu+\tau x_1\right)}\,
+\frac{1+exp\left(\mu+\tau x_m\right)}{exp\left((m-1)(\mu+\tau x_)+(m-1)m \Delta \tau/2\right)}\\
+&= \lambda_1 \frac{1+exp\left(\mu+\tau x_m\right)}{1+exp\left(\mu+\tau x_1\right)}\,
+exp\left(-\frac{-2\left(x_m-x_1\right)\left(x^*-x_1-0.5\Delta\right)\left(x_m-x_1\right)^2}{2\tau^2}
+\right).
+\end{align*}
+Define $\overline{x^*}=x^*+0.5\Delta$ and $\underline{x^*}=x^*-0.5\Delta$; complete the square and simplify (\ref{eq:BCDpilogit}) by changing variables; namely, let 
+$\overline{z}_m=(x_m-x^*)/\sqrt{\Delta/\tau}$ and $\underline{z}_m=(x_m-x^*)/\sqrt{\Delta/\tau}$.  Now (\ref{eq:BCDpilogit}) can be written as
+\begin{equation}
+\pi_{m}= \frac{\lambda_1}{1+exp\left(\mu+\tau x_1\right)}\,
+\left(exp\left(-\frac{\underline{z}_m^2}{2}+\frac{\underline{x^*}^2}{2\Delta/\tau}\right)
++exp\left(\mu-\frac{\overline{z}_m^2}{2}+\frac{\overline{x^*}^2}{2\Delta/\tau}\right)\right).
+\end{equation}
+Because the total allocation proportions sum to one,, we have from () that
+\begin{align}\label{eq:lamda-1logit}
+\lambda_1^{-1}= & \frac{1}{1+exp\left(\mu+\tau x_1\right)}\,
+\left(exp\left(\frac{\underline{x^*}^2}{2\Delta/\tau}\right)\sum_{j=1}^M exp\left(-\frac{\underline{z}_m^2}{2}\right)\right.\\
+&\, \,\left. +exp(\mu)\, \left(exp\left(\frac{\overline{x^*}^2}{2\Delta/\tau}\right)
+\sum_{j=1}^M exp\left(\frac{\overline{z}_m^2}{2}\right)\right)\right).
+\end{align}
+Since the two sums differ only by the first and last terms, $\mathcal{X}$ can be arranged so that these terms are small, making the two sums approximately equal {\bf(work this into assumptions above)}.  Assuming this is the case, and using (\ref{eq:lambda-1logit}), the result follows.
 
+\subsubsection{Proof of Theorem~\ref{thm:logitpi|y}}
+The marginal probability of no toxicity can be written as
+\begin{align}
+P(Y_n=0)&=\sum_m P(Y_n=0|X_n=d_m)P(X_n=d_m)\\
+&=\frac{1}{1+exp\left(\mu+\tau x^*\right)}
+\end{align}
+
+
+Substituting () directly into () yields
+\begin{equation}
+\pi_m=\tilde{\Phi}(\underline{z_j})\frac{1+exp\left(\mu+\tau x_m\right)}{1+exp\left(\mu+\tau x^*\right)}
+=\tilde{\Phi}(\underline{z_j})\frac{P(Y_n=0|X_n=x^*)}{P(Y_n=0|X_n=x_m)}.
+\end{equation}
+$\tilde{\Phi}(\underline{z_j})$
 
 \section{Up--and--Down Convergence}
 
@@ -676,14 +763,14 @@ Theorem
 where $z_{kl}=\delta_{kl}+\sum_{s=1}^{infty}\left[p_{kl}-\pi_l\right]$, $z_{kl}$ is the $(k,l)$th element from the \textit{fundamental matrix for regular Markov chains}  \citep{see, for example}{pg. 75, 77}{keme:snel:1960}), and $\delta_{kl}$ is Kroneker's delta.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION 2 STARTS HERE
-
+\section{Proofs of Theorems ....}
 
 
 \chapter{Higher-Order Up--and--Down Designs and Other Extensions}\label{sec:extens}
 
 Via first-order designs, we have now completed a brief tour of the main UD design properties and estimation approaches. The first-order BCD (with the classical UD design as a special case) is simple and intuitive, and allows for the estimation of any percentile. However, there are cases when neither the classical UD design nor BCD are adequate, such as when
 \begin{itemize}
-\item Subjects treated in cohorts rather than individually, in order to save time and resources;
+\item Subjects are treated in cohorts rather than individually, in order to save time and resources;
 \item In some applications, such as oncology, researchers are reluctant to use randomization in a toxicity study, even for selecting between two adjacent doses (as required for the BCD);
 \item Other UD designs may yield better estimation efficiency.
 \end{itemize}
@@ -734,9 +821,10 @@ $F^*$ & 0.293 &  0.347 & 0.267 & & 0.302 & 0.314  & & 0.253 & 0.264 & 0.326 & 0.
 \end{small}
 \end{center}
 
-Notable special cases of group UD designs, whose $F^*$ can be calculated by hand, are symmetric ones ($u+l=s$) for which $x^*$ is the median (the classical UD design again is a special case of this family, namely GUD$_{(1,0,1)}$). Also the family GUD$_{(k,0,1)}$ is related to the design we describe next.
+Notable special cases of group UD designs, whose $F^*$ can be calculated by hand, are symmetric ones ($u+l=s$) for which $x^*$ is the median (the classical UD design again is a special case of this family, namely GUD$_{(1,0,1)}$). In addition, the family GUD$_{(k,0,1)}$ is related to the design we describe next.
 
 \section{The $k$--in--a--row (``Geometric'') Design}\label{sec:kr}
+{\bf Expand this section a lot; put proof in a subsection at the end.}
 
 The design called here the ``$k$--in--a--row design'' is presented in some detail, due to its widespread use in sensory studies  \citep{Treu:Mini:1995}, and to a now-resolved controversy regarding its properties.  The rule, whose development and introduction to sensory studies date back to Wetherill's work in the 1960s  \citep{Weth:Sequ:1963,Weth:Levi:Sequ:1966}, is extremely simple:
 %
@@ -754,7 +842,7 @@ d_m &\textrm{otherwise},
  F^*=F\left(x^*\right)=1-\left(\frac {1}{2}\right)^{1/k}.
 \end{equation}
 %
-\noindent The $k=1$ case is simply the classical UD design, but $k=2,3,4$ would be associated with $F^*\approx 0.293,0.206$ and $0.159$, respectively.\footnote{It should be noted that the method used in sensory studies is actually the mirror-image of (\ref{eq:krule}), with $k$ successive responses required for a de-escalation and only one non-response for escalation, yielding $F^*\approx 0.707,0.794,0.841,\ldots$.}
+\noindent The $k=1$ case is simply the classical UD design, but $k=2,3,4$ would be associated with $F^*\approx 0.293,0.206$ and $0.159$, respectively.\footnote{The method used in sensory studies is actually the mirror-image of (\ref{eq:krule}), with $k$ successive responses required for a de-escalation and only one non-response for escalation, yielding $F^*\approx 0.707,0.794,0.841,\ldots$.}
 
 While Wetherill correctly identified $F^*$, the characterization of $k$--in--a--row's overall Markov chain behavior was provided only a generation later by \cite{Gezm:Geom:1996}, and completed by \cite{Oron:Hoff:thek:2009}. Recent work also gave the design the following names: first ``geometric UD design'' (for reasons that will be apparent soon) and then \emph{``$k$--in--a--row} '' design \citep{Ivan:Mont:Moha:Durh:impr:2003}, the name used here. Meanwhile, in sensory studies, where it is most commonly used, the design is known as ``forced-choice fixed-staircase methods'' \citep{Treu:Mini:1995}; but this name is used for related non-Markovian designs as well.
 
@@ -777,7 +865,7 @@ The $k$--in--a--row design generates a $k$-th order Markov chain because knowled
   &  0    &0 &0   &0 &0   &0 &0         &0 &F_6 & 0 &\bar{F}_6 & 0\\
 \end{array}\right]
 \end{equation}
-The matrix is irreducible, meaning that there is an asymptotic distribution $\boldsymbol{\pi}^{\textrm{(states)}}$, with positive values for all $Mk$ states. This is not the asymptotic \emph{dose-allocation} distribution $\boldsymbol{\pi}$, since it counts separately different internal states of the same level $m$. The latter can be found by summing $\boldsymbol{\pi}^{\textrm{(states)}}$ over the internal states of each level.
+The matrix is regular, assuring that there is an asymptotic distribution $\boldsymbol{\pi}^{\textrm{(states)}}$, with positive values for all $Mk$ states. This is not the asymptotic \emph{dose-allocation} distribution $\boldsymbol{\pi}$, since it counts separately different internal states of the same level $m$. The latter can be found by summing $\boldsymbol{\pi}^{\textrm{(states)}}$ over the internal states of each level.
 
 \cite{Gezm:Geom:1996} found  $\boldsymbol{\pi}^{\textrm{(states)}}$ by noting that non-base ($>0$) internal states can only be accessed from the internal state immediately below in the same level. The balance equation for such states is, therefore,
 %
@@ -786,7 +874,7 @@ The matrix is irreducible, meaning that there is an asymptotic distribution $\bo
 \end{equation}
 \noindent where $m(j)$ denotes the internal state $j$ within dose level $m$. This is the formula of a decreasing geometric sequence with a quotient of $\left(1-F_m\right)$, hence the name Gezmu suggested for the design (``geometric UD design'').
 
-Now, the balance equation $d_m$ and $d_{m+1}$ is
+Now, the balance equation between $d_m$ and $d_{m+1}$ is
 %
 \begin{equation}\label{eq:kexternal}
 \pi^{\textrm{(states)}}_{m(k-1)}\left(1-F_m\right)=\pi_{m+1}F_{m+1},
@@ -803,9 +891,10 @@ This ratio is monotone decreasing in $m$, conforming to the Durham-Flournoy cond
 
 \section{Biased Coin Design Extensions}
 
-The versatile framework of the BCD lends itself to further extensions. \cite{Bald:Bort:Giov:2008} generalized the group UD design for any user-specified toxicity rate $\Gamma$ by adding a biased coin to the dose allocation procedure. \cite{Flou:aran:1998} proposed the use of an urn model to integrate parallel BCD runs, helping shorten an experiment's duration. This strategy is also useful when clinical trials are performed at different locations.
+The versatile framework of the BCD lends itself to further extensions.
 
-Taking advantage of the flexibility in constructing biased coin designs, \cite{Bort:Giov:Upan:2005} also examined a generalized first-order approach in order to study their properties. Let there be two coins having $\Pr\left\{\textrm{heads}\right\}$ equal to $b_1$ and $b_2$. Then
+\subsection{A Generalized Biased Coin Design}
+Taking advantage of the flexibility in constructing biased coin designs, \cite{Bort:Giov:Upan:2005} examined a generalized first-order approach in order to study their properties. Let there be two coins having $\Pr\left\{\textrm{heads}\right\}$ equal to $b_1$ and $b_2$. Then
 \begin{equation}\label{eq:BortotCombo}
 X_{i+1}=
 \begin{cases}
@@ -821,6 +910,10 @@ F^*b_2=\left(1-F^*\right)b_1;\ \ F^*=b_1/(b_1+b_2).
 \end{equation*}
 \noindent Setting $b_2=1$ yields Durham and Flournoy's BCD. A family of generalized BCDs for the same $\Gamma$ can be created by setting $$\frac{b_2}{b_1}=\frac{1-\Gamma}{\Gamma},\ b_2\in [0,1],$$ so it can be indexed by a single `coin-toss' parameter. Although all members of the family share the same balance point, they differ in other properties, as described below.
 
+\subsection{Integrated Parallel Biased Coin Design Sequences}
+\cite{Flou:aran:1998} proposed the use of an urn model to integrate parallel BCD runs, helping shorten an experiment's duration. This strategy is also useful when clinical trials are performed at different locations.
+
+\section{A Second Order Biased Coin Design}
 \cite{Bort:Giov:Upan:2005} also developed a second-order BCD, again using two coins. Given $X_i=d_m$,
 %
 \begin{equation*}
@@ -835,7 +928,9 @@ d_m &\textrm{otherwise.}
 %
 Bortot and Giovagnoli derived $\boldsymbol{\pi}$, and showed that it is unimodal by the Durham--Flournoy conditions (see Sec.~\ref{sec:balpoint}) and if $(1-\Gamma )b_1+\Gamma b_2=\Gamma /(1-\Gamma )$. However, their simulations indicate only a modest estimation performance improvement over the first-order BCD.
 
-\section{Comparing Up--and--Down Designs}
+\subsection{A Generalized Group Up--and--Down Design}
+\cite{Bald:Bort:Giov:2008} generalized the group UD design for any user-specified toxicity rate $\Gamma$ by adding a biased coin to the dose allocation procedure.
+\chapter{Comparing Up--and--Down Designs}
 
 With several UD variants to choose from for estimating a given quantile, some ways to compare UD designs are needed. An obvious comparison criterion is estimation performance -- e.g., mean square error (MSE) of the quantile estimates. Since estimates at the various dose levels are dependent, in general this practical metric can only be gauged via simulation studies. A more didactic approach that can often save simulation time, is to consider individual properties, and find \emph{theoretical} relationships between designs for these properties. Some properties suggested and examined by researchers are
 %
@@ -881,17 +976,24 @@ For comparing the `peakedness' of UD design families, \cite{Oron:Hoff:thek:2009}
 \noindent (ii) \ For a $k$--in--a--row design and a GUD$_{(k,0,1)}$ with the same $k$, neither design's $\boldsymbol{\pi}$ can be said to be consistently more peaked than the other.
 \end{thm}
 
-\section{Up--and--Down Designs for Joint Studies of Toxicity and Efficacy }
+\chapter{Up--and--Down Designs for Joint Studies of Toxicity and Efficacy }
 
 Most dose-finding experiments focus upon toxicity only, or efficacy only. For these goals, the assumption of a monotone increasing dose-response function $F(x)$ or a monotonically decreasing dose-efficacy function $R(x)$ is usually adequate.
 One approach for experiments involving both toxicity and efficacy is to dichotomize observations into two binary responses per subject, one each for toxicity and efficacy. They can be modeled via a pair of monotone-increasing functions: the dose-toxicity rate function $F(x)$ and the dose-efficacy rate function $R(x)$.
 However, attempts to optimize a single function of toxicity and efficacy are becoming increasingly popular.  For example, one could use a single unimodal utility function $U(x)$, the simplest form of which is $U(x)=aR(x)-F(x)$, with $a>0$ a constant quantifying researchers' assessment of the relative overall benefit of efficacy as compared with the harm of toxicity.
 
-\cite{Kpam:Flou:opti:2001} developed a size $2$ cohort UD design for locating the maximum of $U(x)$. For each pair, doses are split with one subject receiving a dose  exactly $\Delta$ units larger than the other. Outcomes are dichotomized to ``success'' and ``failure'', with success defined as a positive, toxicity-free efficacy response. Each cohort produces a pair of such binary outcomes - $(F,F),(S,F),(F,S)$ or $(S,S)$. The transition rule moves the dosage in the direction of observed success in the case of two opposite responses, and repeats the same dose in the case of two identical responses. \cite{Kpam:Flou:opti:2008} proved that the ``left'' (smaller) and ``right'' dose~allocations of each pair form Markov chains, with unimodal asymptotic distributions identical except for an offset of $\Delta$. The asymptotic properties of unimodality and closeness of the mode to the maximum of $U(x)$ were also proven. 
+\section{A Discretized Keifer-Wolferwitz Procedure}
+\cite{Kpam:Flou:opti:2001} developed a size $2$ cohort UD design for locating the maximum of $U(x)$. For each pair, doses are split with one subject receiving a dose  exactly $\Delta$ units larger than the other. Outcomes are dichotomized to ``success'' and ``failure'', with success defined as a positive, toxicity-free efficacy response. Each cohort produces a pair of such binary outcomes - $(F,F),(S,F),(F,S)$ or $(S,S)$. The transition rule moves the dosage in the direction of observed success in the case of two opposite responses, and repeats the same dose in the case of two identical responses. \cite{Kpam:Flou:opti:2008} proved that the ``left'' (smaller) and ``right'' dose~allocations of each pair form Markov chains, with unimodal asymptotic distributions identical except for an offset of $\Delta$. The asymptotic properties of unimodality and closeness of the mode to the maximum of $U(x)$ were also proven.
 
+\subsection{Effect of the Starting Dose}
 One caveat to this design is that, if the starting point has an extremely low or high success probability, information accrues very slowly and the experiment does not progress very well towards the optimum. Therefore, it is preferable to begin the experiment where a mixture of successes and failures are expected within a few early allocations, and not where they are highly unlikely as at a very low or  very high dose.
+
+\subsection{Variations on the Basic Procedure}
 Alternatively, or additionally, the rate of convergence improves if the dose  is increased or decreased according to the flip of a coin when pairs of responses are either both successes or both failures; however, the resulting stationary distribution will be less peaked.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION 3 STARTS HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION 3 \
+
+\section{Going down if toxicity and up if efficacy}
+\section{Others?}
 
 \chapter{Estimation Following an Up--and--Down Design}\label{sec:est}
 
@@ -910,7 +1012,7 @@ However, averaging estimators suffer from numerous limitations:
 \begin{itemize}
 \item The most commonly used estimators incorporate limited knowledge, at best, of the UD design's Markov properties -- in particular, starting-point-induced biases and insight regarding what constitutes a plausibly stable sample from $\boldsymbol{\pi}$.
 \item As the balance point  approaches a design boundary ($d_1$ or $d_M$), $\boldsymbol{\pi}$ gradually loses its symmetry (compare Fig.~\ref{fig:pi}, left vs. right).  If  $x^*$ is less than 2 levels away from the boundary, the average will be substantially biased in the opposite direction.
-\item The BCD and $k$--in--a--row designs have $\boldsymbol{\pi}$s that are not centered on $x^*$ as well as those of the classical UD design. Rather, they are centered up to half a dose spacing below $x^*$, resulting in a downward averaging-estimator bias for these designs (see Section~\ref{sec:modeloc}).
+\item The BCD and $k$--in--a--row designs have $\boldsymbol{\pi}$s that are not centered on $x^*$ as well as those of the classical UD design. Rather, they are centered as far as half a dose spacing below $x^*$, resulting in a downward averaging-estimator bias for these designs (see Section~\ref{sec:modeloc}).
 \item Furthermore, designs such as $k$--in--a--row and the GUD offer a limited set of balance points that are often slightly different from the quantile of interest $F^{-1}(\Gamma)$. For example, with $\Gamma=0.3$ the natural $k$--in--a--row choice is $k=2$, whose balance point is approximately $x^*=F^{-1}(0.293)$. This introduces yet another bias to averaging estimators, since these estimators' reference point is $x^*$ rather than $F^{-1}(\Gamma)$.
 \end{itemize}
 %
@@ -928,21 +1030,21 @@ Averaging estimators can still be viable when used with care. The recommended av
 
 As mentioned above, when the balance point $x^*$ is close to a boundary of $\mathcal{X}$, the approximate symmetry of $\boldsymbol{\pi}$ is destroyed and dose averages become biased in the direction away from the boundary. A simple mitigating fix, which should work reasonably well as long as the empirical mode is not on the boundary itself, is to \emph{impute} the dose-allocation chain by adding a virtual `dose' of $d_0$ or $d_{M+1}$ each time the boundary condition had been triggered, and use the imputed trajectory in lieu of the original one. This adjustment has yet to be thoroughly studied \citep[Section~3.3]{Oron07}.
 
-Confidence intervals are sometimes reported together with the reversal estimator \citep{Capo:Parp:Lyon:Colu:Cell:Mini:2001,Camo:Capo:Lyon:Colu:Epid:2004}. They assume asymptotic normality of the reversal average, and independence of every pair of reversal points. While the first assumption is correct in principle it might be too ambitious for the small samples used. The second assumption is not supported by recent theory. \cite{Oron07} explored alternative options for estimating the effective sample size for averaging estimators. The most robust option was the number of times the experimental trajectory had crossed the average, or visited the dose levels closest to it. According to Markov chain theory, the sub-chains between consecutive visits to a specific level are conditionally independent of each other \citep{Tsut:rand:1967}. In numerical runs, the resulting standard-error formula using this effective-sample-size estimate was found to be conservative in estimating the variance but, due to biases associated with averaging estimators, the empirical interval coverage was usually close to the specified confidence level.
+Confidence intervals are sometimes reported together with the reversal estimator \citep{Capo:Parp:Lyon:Colu:Cell:Mini:2001,Camo:Capo:Lyon:Colu:Epid:2004}. They assume asymptotic normality of the reversal average, and independence of every pair of reversal points.  The second assumption is not supported by recent theory. \cite{Oron07} explored alternative options for estimating the effective sample size for averaging estimators. The most robust option was the number of times the experimental trajectory had crossed the average, or visited the dose levels closest to it. According to Markov chain theory, the sub-chains between consecutive visits to a specific level are conditionally independent of each other \citep{Tsut:rand:1967}. In numerical runs, the resulting standard-error formula using this effective-sample-size estimate was found to be conservative in estimating the variance but, due to biases associated with averaging estimators, the empirical interval coverage was usually close to the specified confidence level.
 
 \section{Regression Estimators}
 
-Parametric regression (usually logistic or probit) is occasionally encountered as an way to estimate $F^{-1}(\Gamma)$ following a UD experiment. Given the small sample size and the limited number of dose levels visited during a typical UD experiment, using parametric regression to estimate the dose-toxicity rate function $F$ is, generally speaking, inefficient.  This is because estimates of $F^{-1}(\Gamma)$ typically will be a function of a slope parameter which requires allocations far from $F^{-1}(\Gamma)$ in order to be estimated efficiently \citep{Ford:Tors:Wu:use:1992}.  UD procedures, by design concentrating allocations around $F^{-1}(\Gamma)$, will typically result in relatively poor estimates from those of a parametric slope parameter, even with moderately large sample sizes.
+Parametric regression (usually logistic or probit) is occasionally encountered as a way to estimate $F^{-1}(\Gamma)$ following a UD experiment. Given the small sample size and the limited number of dose levels visited during a typical UD experiment, using parametric regression to estimate the dose-toxicity rate function $F$ is, generally speaking, inefficient.  This is because estimates of $F^{-1}(\Gamma)$ typically will be a function of a slope parameter, which requires allocations far from $F^{-1}(\Gamma)$ in order to be estimated efficiently \citep{Ford:Tors:Wu:use:1992}.  UD procedures, by design concentrating allocations around $F^{-1}(\Gamma)$, will typically result in relatively poor estimates  of a parametric slope parameter, even with moderately large sample sizes.
 
 The nonparametric isotonic regression dose-finding estimate, introduced by \cite{Styl:Flou:dose:2002}, is a simple piecewise-linear interpolation between point estimates calculated via the pool-adjacent-violators algorithm \citep[PAVA,][]{BBBB:order:1972}. The point estimates themselves are identical to the empirical frequencies $\mathbf{\hat{F}}=\left(\hat{F}_1,\ldots,\hat{F}_M\right)$ (see (\ref{eq:fhat})), as long as the latter do not violate monotonicity. In case of a violation, violating values are recursively replaced by an average weighted by the number of observations, until all violations disappear. In the binary dose-toxicity case, the weighted average is equivalent to \emph{pooling} all observations from the violating doses together, and calculating the overall toxicity frequency; hence the name ``pool-adjacent-violators algorithm .'' The procedure generates the characteristic flat stretches, clearly visible in the solid lines of Figure~\ref{fig:isot}.
 
- Isotonic regression is also the nonparametric maximum likelihood estimator for $F$ on $\mathcal{X}$, under a monotonicity assumption. However, if one makes the plausible assumption that $F$ is \emph{strictly} increasing, then the estimate violates it, ostensibly producing biases in opposite directions at each flat stretch.\footnote{It is one of those cases when the MLE is on the boundary of the constrained parameter region. Strict monotonicity is equivalent to excluding the boundaries themselves from the allowed region.} Quantile estimation requires \emph{inverse estimation} from the isotonic estimate of the regression function which has a flat stretches, and a flat stretch near $y=\Gamma$ would push some quantile estimates sideways (see again Fig.~\ref{fig:isot}), increasing their MSE.
+ Isotonic regression is also the nonparametric maximum likelihood estimator for $F$ on $\mathcal{X}$, under a monotonicity assumption. However, if one makes the plausible assumption that $F$ is \emph{strictly} increasing, then the estimate violates it, ostensibly producing biases in opposite directions at each flat stretch.\footnote{It is one of those cases when the MLE is on the boundary of the constrained parameter region. Strict monotonicity is equivalent to excluding the boundaries themselves from the allowed region.} Quantile estimation requires \emph{inverse estimation} from the isotonic estimate of the regression function, and a flat stretch near $y=\Gamma$ would push some quantile estimates sideways (see again Fig.~\ref{fig:isot}), increasing their MSE.
 
  \cite{Oron07} proposed a simple modification of PAVA that alleviates this problem while retaining the method's simplicity. Each flat stretch is replaced by a single point with the same $\hat{F}$ value, located at an $x$ value that is a weighted average calculated using the same weights used for $\hat{F}$. With linear interpolation between the isotonic estimates, this modification is called ``centered isotonic regression'' (CIR); see the dotted lines in Figure~\ref{fig:isot}. In numerical simulations it nearly always produces lower MSEs than ordinary isotonic regression. R code for CIR is available in the online supplement to \cite{Oron:Hoff:smal:2013}.
 
-Estimators based on isotonic regression are the most robust all-around choice currently available for any limited-sample dose-finding application, including UD designs. Unlike averaging estimators, they do not suffer from peculiarities related to dose spacing, boundaries, or the starting point. Good estimates of logistic or probit regression parameters require dose-allocations distant from $x^*$ \citep{Ford:Tors:Wu:use:1992}. Therefore, following an UD experiment, which concentrates data around $x^*$, the logistic and probit estimates of $F^{-1}(\Gamma)$ will have relatively large variance. By contrast, isotonic estimators perform better with data concentrated near $x^*$.
+Estimators based on isotonic regression are the most robust all-around choice currently available for any limited-sample dose-finding application, including UD designs. Unlike averaging estimators, they do not suffer from peculiarities related to dose spacing, boundaries, or the starting point. As stated above, without large sample sizes, isotonic estimates outperform parametric estimates because  data is concentrated near $x^*$.
 
-Another drawback is the current lack of an adequate interval estimate.  \cite{Wright:1984} and \cite{Muke:1993} study percentile estimators under the condition that the dose space becomes dense.  This assumption is clearly invalid for UD designs with fixed doses.  \cite{Chao:Fuh:boot:2001} introduced the bootstrap to UD interval estimation. Their motivating example was a classical-UD explosive testing experiment, and the estimator used was from a parametric regression model. Bootstrap samples are generated by running virtual UD `experiments', with toxicity probabilities determined via the regression estimator that uses the observed empirical toxicity rates $\mathbf{\hat{F}}$.  \cite{Styl:Pros:Flou:esti:2003} implemented the method in a nonparametric context via isotonic regression, but only for forward estimation (i.e, estimation of $F$ values at specified doses, rather than estimates of the quantile $F^{-1}(\Gamma)$). \cite{Oron07} explored the bootstrap for UD quantile estimation, and found that interval coverage was generally insufficient (i.e., the intervals were too narrow). We are exploring some ideas for improving coverage.
+One  drawback of isotonic estimators is the current lack of an adequate interval estimate.  \cite{Wright:1984} and \cite{Muke:1993} study percentile estimators under the condition that the dose space becomes dense.  This assumption is clearly invalid for UD designs with fixed doses.  \cite{Chao:Fuh:boot:2001} introduced the bootstrap to UD interval estimation. Their motivating example was a classical-UD explosive testing experiment, and the estimator used was from a parametric regression model. Bootstrap samples are generated by running virtual UD `experiments', with toxicity probabilities determined via the regression estimator that uses the observed empirical toxicity rates $\mathbf{\hat{F}}$.  \cite{Styl:Pros:Flou:esti:2003} implemented the method in a nonparametric context via isotonic regression, but only for forward estimation (i.e, estimation of $F$ values at specified doses, rather than estimates of the quantile $F^{-1}(\Gamma)$). \cite{Oron07} explored the bootstrap for UD quantile estimation, and found that interval coverage was generally insufficient (i.e., the intervals were too narrow). We are exploring some ideas for improving coverage.
 
 
 
@@ -978,13 +1080,13 @@ X_{i+1}=
 \item After final stopping, the maximum-tolerated-dose (MTD) estimate is the highest dose for which $\hat{F}_m<1/3$.\footnote{There exists a variant allowing the final estimate to have $\hat{F}_m=1/3$.}
 \end{enumerate}
 %
-\noindent The `3+3' protocol has been generalized as the `A+B rule' \citep{Lin:Shih:stat:2001}, but the `3+3' rule is by far the most commonly used.
+\noindent The `3+3' rule has been generalized as the `A+B rule' \citep{Lin:Shih:stat:2001}, but the `3+3' rule is by far the most commonly used.
 
 The `3+3' rule is \emph{a toxicity-controlling escalation protocol} rather than an experimental design in the research sense. However, the initial cohort at each level follows rules similar to GUD$_{(3,0,2)}$, and after the second cohort the rule is reminiscent of GUD$_{(6,1,2)}$  except for the nontrivial difference that under `3+3' the 6 observations are not necessarily the most recent, and 3 of them had already participated in one transition decision.
 
 Several methodological studies have found that `3+3's statistical properties are poor, and that the recommended MTD is strongly biased downward compared with its ostensible target, which is usually presented as $F^{-1}(0.3)$ or $F^{-1}(1/3)$ \citep{Rein:Paol:O'Qu:oper:1999,Lin:Shih:stat:2001}. The `3+3' rule is also disproportionately cumbersome and arcane when contrasted with its simplistic approach to the dose-toxicity relationship. Yet, it continues to be the off-the-shelf method of choice for most Phase~I trials.
 
-Interestingly, while statisticians have generally looked down upon this design, the `3+3' paradigm of \emph{selecting} a discrete dose from $\mathcal{X}$, in contrast to the universal UD practice of \emph{estimating} $F^{-1}(\Gamma)$ on a continuous dose scale using experimental data, has been rather influential upon recent methodological approaches to Phase~I designs. The effect of this influence is described immediately below.
+Interestingly, while statisticians are generally critical of this design, the `3+3' paradigm of \emph{selecting} a discrete dose from $\mathcal{X}$, in contrast to the universal UD practice of \emph{estimating} $F^{-1}(\Gamma)$ on a continuous dose scale, has been rather influential upon recent methodological approaches to Phase~I designs. The effect of this influence is described immediately below.
 
 \section{Long Memory Dose--Finding Designs}
 
@@ -1032,7 +1134,7 @@ Further complicating matters is the commonly misunderstood issue of \emph{small-
 
 This metric is fundamentally debatable: Phase~I trials recruit volunteers under informed consent. A trial's main goal is to study a treatment's safety, not to ensure participants will get the optimal treatment combination. But the focus on $n^*$ is questionable for \emph{statistical} reasons as well.
 
-The statistic for $n^*$ reported in simulation studies is really an ensemble average of $n^*$, taken over a large number of simulated ``experiments'' under identical conditions. In real life, Phase~I trials are one-of-a-kind affairs. What about $n^*$'s run-to-run variability? Oron and Hoff \citep{Oron:Hoff:smal:2013} examined the entire \emph{ensemble distribution} of $n^*$. Typical results are shown in Figure~\ref{fig:nstar}, under three different forms of $F$. Each simulated `experiment' had 16 cohorts of size 2. Distributions of $n^*$ from CRM are on the left, a UD design (specifically, GUD$_{(2,0,1)}$) at center, and a CCD on the right. Both CRM and CCD targeted $\Gamma=0.3$, and were calibrated at settings recommended by their developers. All histograms use the same scale, and the first cohort was excluded.
+The statistic for $n^*$ reported in simulation studies is really an ensemble average of $n^*$, taken over a large number of simulated ``experiments'' under identical conditions. In real life, Phase~I trials are one-of-a-kind affairs. What about $n^*$'s run-to-run variability? \citep{Oron:Hoff:smal:2013} examined the entire \emph{ensemble distribution} of $n^*$. Typical results are shown in Figure~\ref{fig:nstar}, under three different forms of $F$. Each simulated `experiment' had 16 cohorts of size 2. Distributions of $n^*$ from CRM are on the left, a UD design (specifically, GUD$_{(2,0,1)}$) at center, and a CCD on the right. Both CRM and CCD targeted $\Gamma=0.3$, and were calibrated at settings recommended by their developers. All histograms use the same scale, and the first cohort was excluded.
 
 \begin{figure}[!ht]
 \begin{center}
