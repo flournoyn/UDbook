@@ -74,7 +74,7 @@ $\{p_{m;m+1}\}$ and $\{p_{m;m-1}\}$, respectively, are points on these curves.
 %
 \begin{defn}\label{def:pxqx}
 Consider an up-and-down design with an `up' transition probability  $p_{m,m+1}$ that might vary over time, i.e., with the accruing sample size $n\geq 1$.\footnote{A terminology note: for most designs discussed in this chapter, the random-walk transition probabilities are constant in time, and therefore the use of ``$\lim_{n\to\infty}$'' in Definition~\ref{def:pxqx} is redundant. However, Section~\ref{sec:kr} presents a widely-used UD method whose dose-transition probabilities only stabilize in the $n\to\infty$ limit. Therefore we use a limit notation.} If, in the interior of $\mathcal{X}$ $($specifically, $1\leq m<M)$, $$\lim_{n\to\infty}\left(p_{m,m+1}\right)=g_{_\mathrm{up}}\left(d_m\right),$$
-where $g_{_\mathrm{up}}\left(d_m\right)$ is an algebraic function of $d_m$  \underline{only}, then the extension of $g_{_\mathrm{up}}\left(d_m\right)$ onto its natural continuous domain $\mathcal{D}{_\mathrm{up}}\supseteq\left[d_1,d_M\right]$ will be called \textbf{the 'up' transition function $p(x)$, $x\in\left[d_1,d_M\right]$.} The '\emph{down}' function $q(x)$ is similarly defined from the `down' transition probability $p_{m,m-1}, 1<m\leq M$.
+where $g_{_\mathrm{up}}\left(d_m\right)$ is an algebraic function of $d_m$  \underline{only}, then the extension of $g_{_\mathrm{up}}\left(d_m\right)$ onto its natural continuous domain $\mathcal{D}{_\mathrm{up}}\supseteq\left[d_1,d_M\right]$ will be called \textbf{the `up' transition function $p(x)$, $x\in\left[d_1,d_M\right]$.} The `\emph{down}' function $q(x)$ is similarly defined from the `down' transition probability $p_{m,m-1}, 1<m\leq M$.
 \end{defn}
 %
 \noindent In words, $p(x)$ and $q(x)$ are defined on a continuous domain that includes $\mathcal{X}$ while $\{p_{m,m+1}\}$ and $\{p_{m,m-1}\}$ are defined only on $\mathcal{X}$ itself.
@@ -341,9 +341,9 @@ The BCD and RBCD have identical adjacent-level ratios~(\ref{eq:BCDlambda}) which
 \begin{align*}
 \lambda_m&=\frac{p_{m,m+1}}{p_{m+1,m}}
 =\frac{\Gamma }{(1-\Gamma)}\frac{(1-F_m)}{F_{m+1}}
-\\&=exp\left(\mu+\tau x^*\right)\frac{1}{1+exp\left(\mu+\tau x_m\right)}\, 
+\\&=exp\left(\mu+\tau x^*\right)\frac{1}{1+exp\left(\mu+\tau x_m\right)}\,
 \frac{1+exp\left(\mu+\tau x_{m+1}\right)}{exp\left(\mu+\tau x_{m+1}\right)}, \ m=1,\ldots,M-1.
-\end{align*} 
+\end{align*}
 Noting that $x_m=(m-1)\Delta$, the stationary dose-allocation probabilities can be written as
 \begin{align*}\label{eq:BCDpilogit}
 \pi_{m}=\prod_{j=1}^m \lambda_j &= \lambda_1 \frac{exp(k (\mu+\tau x^*))}{1+exp\left(\mu+\tau x_1\right)}\,
@@ -352,9 +352,9 @@ Noting that $x_m=(m-1)\Delta$, the stationary dose-allocation probabilities can 
 exp\left(-\frac{-2\left(x_m-x_1\right)\left(x^*-x_1-0.5\Delta\right)\left(x_m-x_1\right)^2}{2\tau^2}
 \right).
 \end{align*}
-Define $\overline{x^*}=x^*+0.5\Delta$ and $\underline{x^*}=x^*-0.5\Delta$; complete the square and simplify (\ref{eq:BCDpilogit}) by changing variables; namely, let 
+Define $\overline{x^*}=x^*+0.5\Delta$ and $\underline{x^*}=x^*-0.5\Delta$; complete the square and simplify (\ref{eq:BCDpilogit}) by changing variables; namely, let
 $\overline{z}_m=(x_m-x^*)/\sqrt{\Delta/\tau}$ and $\underline{z}_m=(x_m-x^*)/\sqrt{\Delta/\tau}$.  Now (\ref{eq:BCDpilogit}) can be written as
-\begin{equation}
+\begin{equation}\label{{eq:BCDpilogit2}}
 \pi_{m}= \frac{\lambda_1}{1+exp\left(\mu+\tau x_1\right)}\,
 \left(exp\left(-\frac{\underline{z}_m^2}{2}+\frac{\underline{x^*}^2}{2\Delta/\tau}\right)
 +exp\left(\mu-\frac{\overline{z}_m^2}{2}+\frac{\overline{x^*}^2}{2\Delta/\tau}\right)\right).
@@ -366,7 +366,7 @@ Because the total allocation proportions sum to one,, we have from () that
 &\, \,\left. +exp(\mu)\, \left(exp\left(\frac{\overline{x^*}^2}{2\Delta/\tau}\right)
 \sum_{j=1}^M exp\left(\frac{\overline{z}_m^2}{2}\right)\right)\right).
 \end{align}
-Since the two sums differ only by the first and last terms, $\mathcal{X}$ can be arranged so that these terms are small, making the two sums approximately equal {\bf(work this into assumptions above)}.  Assuming this is the case, and using (\ref{eq:lambda-1logit}), the result follows.
+Since the two sums differ only by the first and last terms, $\mathcal{X}$ can be arranged so that these terms are small, making the two sums approximately equal {\bf(work this into assumptions above)}.  Assuming this is the case, and inserting (\ref{eq:lambda-1logit}) into (\ref{eq:BCDpilogit2}) yields
 
 \subsubsection{Proof of Theorem~\ref{thm:logitpi|y}}
 The marginal probability of no toxicity can be written as
@@ -416,7 +416,7 @@ The convergence of \emph{empirical} dose allocations at the individual dose leve
 Let $\mathbf{W}(n)=\left(W_1(n),\ldots ,W_M(n)\right)$ denote the empirical allocation distribution, i.e., the proportion of subjects allocated to each level when $n$ subjects have been allocated in total. Then for UD designs, the asymptotic distribution of $\mathbf{W}$ is determined by the central limit theorem (CLT) for regular Markov chains:
 %
 \begin{equation}\label{eq:CLT}
-\sqrt{n}\left(\left(W_1(n),\ldots, W_m(n)\right)-\boldsymbol{\pi}^\prime\right)\,
+\sqrt{n}\left(\left(W_1(n),\ldots, W_M(n)\right)-\boldsymbol{\pi}^\prime\right)\,
 \stackrel{\mathcal{L}}\longrightarrow
 \ \mathcal{N}\left(0,diag\left[\sigma_1^2(\mathbf{P})
 ,\ldots ,\sigma_M^2(\mathbf{P})\right] \right),
@@ -480,7 +480,7 @@ In the case of a monotonicity violation among the $\{\hat{F}_m\}$, isotonic regr
 \begin{center}
 \includegraphics[scale=0.65]{isot}
 \caption{Dose-response plots display cumulative toxicity rates $\mathbf{\hat{F}}$
-for each of the randomly-generated scenarios of Figure~\ref{fig:traject} and for both the classical UD design ($\Gamma=0.50$, top) and the BCD with $b=1/3$ ($\Gamma=0.25$, bottom): 'x' symbols mark the proportion of subjects receiving dose $d_m$; isotonic regression estimates are given by the solid lines; and centered-isotonic regression estimates are given by the dotted lines.  The respective point estimates of $F^{-1}(\Gamma)$ are the $x$ values where the solid lines cross the dash-dot horizonal $y=\Gamma$ lines. The true quantile is marked with a dash-dot vertical line.}\label{fig:isot}
+for each of the randomly-generated scenarios of Figure~\ref{fig:traject} and for both the classical UD design ($\Gamma=0.50$, top) and the BCD with $b=1/3$ ($\Gamma=0.25$, bottom): `x' symbols mark the proportion of subjects receiving dose $d_m$; isotonic regression estimates are given by the solid lines; and centered-isotonic regression estimates are given by the dotted lines.  The respective point estimates of $F^{-1}(\Gamma)$ are the $x$ values where the solid lines cross the dash-dot horizonal $y=\Gamma$ lines. The true quantile is marked with a dash-dot vertical line.}\label{fig:isot}
 \end{center}
 \end{figure}
 
