@@ -43,26 +43,40 @@
 \contentsline {section}{\numberline {4.3}Biased Coin Design Extensions}{44}
 \contentsline {subsection}{\numberline {4.3.1}A Generalized Biased Coin Design}{44}
 \contentsline {subsection}{\numberline {4.3.2}Integrated Parallel Biased Coin Design Sequences}{45}
+\contentsline {subsection}{\numberline {4.3.3}Using Biased Coin Designs to Approximate Optimal Designs}{46}
 \contentsline {section}{\numberline {4.4}A Second Order Biased Coin Design}{46}
 \contentsline {subsection}{\numberline {4.4.1}A Generalized Group Up--and--Down Design}{46}
 \contentsline {chapter}{\numberline {5}Comparing Up--and--Down Designs}{47}
-\contentsline {subsection}{\numberline {5.0.2}Convergence Rates}{47}
+\contentsline {section}{\numberline {5.1}Convergence Rates}{47}
 \contentsline {subsubsection}{``Peakedness'' of the Asymptotic Dose--Allocation Distribution}{48}
 \contentsline {chapter}{\numberline {6}Up--and--Down Designs for Joint Studies of Toxicity and Efficacy }{51}
 \contentsline {section}{\numberline {6.1}A Discretized Keifer-Wolferwitz Procedure}{52}
 \contentsline {subsection}{\numberline {6.1.1}Effect of the Starting Dose}{52}
 \contentsline {subsection}{\numberline {6.1.2}Variations on the Basic Procedure}{52}
-\contentsline {section}{\numberline {6.2}Going down if toxicity and up if efficacy}{53}
+\contentsline {section}{\numberline {6.2}Going Down after a Toxicity and Going Up after an Efficacious Outcome}{53}
 \contentsline {section}{\numberline {6.3}Others?}{53}
 \contentsline {chapter}{\numberline {7}Estimation Following an Up--and--Down Design}{55}
-\contentsline {section}{\numberline {7.1}Dose--Averaging Estimators}{56}
-\contentsline {subsection}{\numberline {7.1.1}The Case Against Reversal--Only Estimators}{57}
-\contentsline {subsection}{\numberline {7.1.2}Alternative Solutions for Averaging Estimators}{58}
-\contentsline {section}{\numberline {7.2}Regression Estimators}{59}
-\contentsline {chapter}{\numberline {8}Other Approaches to Dose--Finding}{61}
-\contentsline {section}{\numberline {8.1}The 3+3 Rule (\emph {precise origins unknown})}{61}
-\contentsline {section}{\numberline {8.2}Long Memory Dose--Finding Designs}{63}
-\contentsline {subsection}{\numberline {8.2.1}The Continual Reassessment Method (CRM)}{63}
-\contentsline {section}{\numberline {8.3}Advantages and Drawbacks of Long--Memory Designs}{65}
-\contentsline {chapter}{\numberline {9}Summary and Practical Recommendations}{69}
-\contentsline {chapter}{\numberline {10}Historical Notes}{73}
+\contentsline {section}{\numberline {7.1}Ancillarity of an Up--and--Down Design}{56}
+\contentsline {section}{\numberline {7.2}Dose--Averaging Estimators}{56}
+\contentsline {subsection}{\numberline {7.2.1}The Case Against Reversal--Only Estimators}{57}
+\contentsline {subsection}{\numberline {7.2.2}Alternative Solutions for Averaging Estimators}{58}
+\contentsline {section}{\numberline {7.3}Isotonic Regression Based Estimators}{59}
+\contentsline {section}{\numberline {7.4}Estimation from Parametric Models}{60}
+\contentsline {subsection}{\numberline {7.4.1}Ancillarity of Up--and--Down Designs}{61}
+\contentsline {subsection}{\numberline {7.4.2}Maximum Likelihood Estimates}{62}
+\contentsline {subsection}{\numberline {7.4.3}Asymptotic Normality of Maximum Likelihood Estimates}{62}
+\contentsline {subsection}{\numberline {7.4.4}Efficiency with Respect to Optimal Designs}{62}
+\contentsline {section}{\numberline {7.5}Comparing Estimators}{63}
+\contentsline {chapter}{\numberline {8}Other Approaches to Dose--Finding}{65}
+\contentsline {section}{\numberline {8.1}The 3+3 Rule (\emph {precise origins unknown})}{65}
+\contentsline {section}{\numberline {8.2}Long Memory Dose--Finding Designs}{67}
+\contentsline {subsection}{\numberline {8.2.1}Best Intention Designs}{67}
+\contentsline {subsubsection}{The Continual Reassessment Method (CRM)}{67}
+\contentsline {subsection}{\numberline {8.2.2}Adaptive Optimal Designs}{69}
+\contentsline {subsection}{\numberline {8.2.3}Bayesian Optimal Designs}{69}
+\contentsline {section}{\numberline {8.3}Advantages and Drawbacks of Long--Memory Designs}{69}
+\contentsline {subsection}{\numberline {8.3.1}Problems with Convergence}{70}
+\contentsline {subsection}{\numberline {8.3.2}Small Sample Characteristics}{70}
+\contentsline {subsection}{\numberline {8.3.3}Toxicity Rates}{73}
+\contentsline {chapter}{\numberline {9}Summary and Practical Recommendations}{75}
+\contentsline {chapter}{\numberline {10}Historical Notes}{79}

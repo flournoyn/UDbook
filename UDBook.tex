@@ -913,6 +913,8 @@ F^*b_2=\left(1-F^*\right)b_1;\ \ F^*=b_1/(b_1+b_2).
 \subsection{Integrated Parallel Biased Coin Design Sequences}
 \cite{Flou:aran:1998} proposed the use of an urn model to integrate parallel BCD runs, helping shorten an experiment's duration. This strategy is also useful when clinical trials are performed at different locations.
 
+\subsection{Using Biased Coin Designs to Approximate Optimal Designs}
+
 \section{A Second Order Biased Coin Design}
 \cite{Bort:Giov:Upan:2005} also developed a second-order BCD, again using two coins. Given $X_i=d_m$,
 %
@@ -930,6 +932,7 @@ Bortot and Giovagnoli derived $\boldsymbol{\pi}$, and showed that it is unimodal
 
 \subsection{A Generalized Group Up--and--Down Design}
 \cite{Bald:Bort:Giov:2008} generalized the group UD design for any user-specified toxicity rate $\Gamma$ by adding a biased coin to the dose allocation procedure.
+
 \chapter{Comparing Up--and--Down Designs}
 
 With several UD variants to choose from for estimating a given quantile, some ways to compare UD designs are needed. An obvious comparison criterion is estimation performance -- e.g., mean square error (MSE) of the quantile estimates. Since estimates at the various dose levels are dependent, in general this practical metric can only be gauged via simulation studies. A more didactic approach that can often save simulation time, is to consider individual properties, and find \emph{theoretical} relationships between designs for these properties. Some properties suggested and examined by researchers are
@@ -940,7 +943,7 @@ With several UD variants to choose from for estimating a given quantile, some wa
 \item How well is $\boldsymbol{\pi}$ centered around $x^*$.
 \end{itemize}
 
-\subsection{Convergence Rates}
+\section{Convergence Rates}
 
 \cite{Bort:Giov:Upan:2005} showed that for the family of generalized BCDs of the form (\ref{eq:BortotCombo}) having the same $\Gamma$, the asymptotic allocation variance is a decreasing function of $b_2$ and, therefore, Durham and Flournoy's BCD ($b_2=1$) is the minimum-asymptotic-variance member of this family. Moreover, the geometric rate of convergence to stationary behavior increases with increasing $b_2$, up to a certain $b_2^\textrm{(max.)}$, which in numerical simulations tended to be greater than $1$. In summary, the simplest member of the family (i.e., the BCD) appears to have the best convergence properties.
 
@@ -992,7 +995,7 @@ One caveat to this design is that, if the starting point has an extremely low or
 Alternatively, or additionally, the rate of convergence improves if the dose  is increased or decreased according to the flip of a coin when pairs of responses are either both successes or both failures; however, the resulting stationary distribution will be less peaked.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION 3 \
 
-\section{Going down if toxicity and up if efficacy}
+\section{Going Down after a Toxicity and Going Up after an Efficacious Outcome}
 \section{Others?}
 
 \chapter{Estimation Following an Up--and--Down Design}\label{sec:est}
@@ -1002,6 +1005,8 @@ A crucial property of up--and--down designs that is often missed by the casual o
 For example, numerous environmental toxicity studies \citep{Lich:updo:1998,Sund:Patr:Jull:Warn:Use:2004,Sween:etal:canines:2010} estimate LD$_{50}$ using reference tables prepared in the 1960's by \cite{Dixo:up-a:1965} for classical UD experiments with extremely small samples ($n<10$). Dixon assumed that the toxicity-threshold distribution is normal, with its standard deviation exactly equal to the UD dose spacing. At that time, UD Markov properties were only beginning to be understood. These tables from Dixon should be considered obsolete, but they are still being used occasionally.
 
 Another example of a misinformed and very poor estimator is the use of the UD design's last allocation $X_n$, or the last allocation-recommendation $X_{n+1}$.  Methodologists comparing UD designs with procedures for which the last allocation is a reasonable estimate (see Section~\ref{sec:other} for such designs) sometimes assume that this estimator is sensible for UD designs as well \citep{O'Qu:Chev:meth:1991,Zack:stag:2009}. But using an arbitrary allocation from a random walk as an estimator of anything makes no sense. Needless to say, the UD design does not perform well in such misguided comparisons.
+
+\section{Ancillarity of an Up--and--Down Design}
 
 \section{Dose--Averaging Estimators}\label{sec:averaging}
 
@@ -1032,9 +1037,9 @@ As mentioned above, when the balance point $x^*$ is close to a boundary of $\mat
 
 Confidence intervals are sometimes reported together with the reversal estimator \citep{Capo:Parp:Lyon:Colu:Cell:Mini:2001,Camo:Capo:Lyon:Colu:Epid:2004}. They assume asymptotic normality of the reversal average, and independence of every pair of reversal points.  The second assumption is not supported by recent theory. \cite{Oron07} explored alternative options for estimating the effective sample size for averaging estimators. The most robust option was the number of times the experimental trajectory had crossed the average, or visited the dose levels closest to it. According to Markov chain theory, the sub-chains between consecutive visits to a specific level are conditionally independent of each other \citep{Tsut:rand:1967}. In numerical runs, the resulting standard-error formula using this effective-sample-size estimate was found to be conservative in estimating the variance but, due to biases associated with averaging estimators, the empirical interval coverage was usually close to the specified confidence level.
 
-\section{Regression Estimators}
+\section{Isotonic Regression Based Estimators}
 
-Parametric regression (usually logistic or probit) is occasionally encountered as a way to estimate $F^{-1}(\Gamma)$ following a UD experiment. Given the small sample size and the limited number of dose levels visited during a typical UD experiment, using parametric regression to estimate the dose-toxicity rate function $F$ is, generally speaking, inefficient.  This is because estimates of $F^{-1}(\Gamma)$ typically will be a function of a slope parameter, which requires allocations far from $F^{-1}(\Gamma)$ in order to be estimated efficiently \citep{Ford:Tors:Wu:use:1992}.  UD procedures, by design concentrating allocations around $F^{-1}(\Gamma)$, will typically result in relatively poor estimates  of a parametric slope parameter, even with moderately large sample sizes.
+
 
 The nonparametric isotonic regression dose-finding estimate, introduced by \cite{Styl:Flou:dose:2002}, is a simple piecewise-linear interpolation between point estimates calculated via the pool-adjacent-violators algorithm \citep[PAVA,][]{BBBB:order:1972}. The point estimates themselves are identical to the empirical frequencies $\mathbf{\hat{F}}=\left(\hat{F}_1,\ldots,\hat{F}_M\right)$ (see (\ref{eq:fhat})), as long as the latter do not violate monotonicity. In case of a violation, violating values are recursively replaced by an average weighted by the number of observations, until all violations disappear. In the binary dose-toxicity case, the weighted average is equivalent to \emph{pooling} all observations from the violating doses together, and calculating the overall toxicity frequency; hence the name ``pool-adjacent-violators algorithm .'' The procedure generates the characteristic flat stretches, clearly visible in the solid lines of Figure~\ref{fig:isot}.
 
@@ -1047,9 +1052,74 @@ Estimators based on isotonic regression are the most robust all-around choice cu
 One  drawback of isotonic estimators is the current lack of an adequate interval estimate.  \cite{Wright:1984} and \cite{Muke:1993} study percentile estimators under the condition that the dose space becomes dense.  This assumption is clearly invalid for UD designs with fixed doses.  \cite{Chao:Fuh:boot:2001} introduced the bootstrap to UD interval estimation. Their motivating example was a classical-UD explosive testing experiment, and the estimator used was from a parametric regression model. Bootstrap samples are generated by running virtual UD `experiments', with toxicity probabilities determined via the regression estimator that uses the observed empirical toxicity rates $\mathbf{\hat{F}}$.  \cite{Styl:Pros:Flou:esti:2003} implemented the method in a nonparametric context via isotonic regression, but only for forward estimation (i.e, estimation of $F$ values at specified doses, rather than estimates of the quantile $F^{-1}(\Gamma)$). \cite{Oron07} explored the bootstrap for UD quantile estimation, and found that interval coverage was generally insufficient (i.e., the intervals were too narrow). We are exploring some ideas for improving coverage.
 
 
+\section{Estimation from Parametric Models}
+Let $Y_i=1$ if the $i$th subject experiences toxicity, and zero otherwise, $i=1,\ldots,n$. Let $F(d,\boldsymbol{\theta})=P\{Y_i=1|X_i=d\}$ be a monotone function increasing from zero to one with dose $d\in \Re $ that depends on  a vector-valued parameter $\boldsymbol{\theta}$ of dimension $s$.   Assume $\mathcal{X}=\{d_1,\ldots,d_M\}$ are $M$ doses values of $d$ that are used in an experiment.  Define the toxicity rates at the doses in $\mathcal{X}$: $F_m=F(d_m,\boldsymbol{\theta})=P\{Y_i=1|X_i=d_m\},i=1,\ldots,n.; j=1,\ldots,M.$  
+
+\subsection{Ancillarity of Up--and--Down Designs}
+Let $\mathbf{Y_i}=\{Y_1,\ldots,Y_i\}$ and $\mathbf{X_i}=\{X_1,\ldots,X_i\}$ denote the collection of outcomes observed and the collection of doses used through the $i$th subject, respectively.  Let $\mathbf{H_i}=\{H_1,\ldots,H_i\}$, where $H_j$ denotes additional information used to determine $X_j$.  For example, for a biased coin design, $H_j$ denotes the outcome of the coin flip used to determine the dose for the   $j$th subject.
+By successive conditioning, the likelihood of a first order  up--and--down design after $n$ subjects can be written as 
+\begin{align}\label{eq:LKgeneral}
+\mathcal{L}_n=P_{\boldsymbol{\theta}}\left\{	\mathbf{Y_n}, \mathbf{X_n}, \mathbf{H_n}	\right\}
+&=P_{\boldsymbol{\theta}}\left\{ 	Y_n\vert \mathbf{Y_{n-1}}, \mathbf{X_n}, \mathbf{H_n}	
+\right\}
+P_{\boldsymbol{\theta}}\left\{	X_n\vert \mathbf{Y_{n-1}}, \mathbf{X_{n-1}}, \mathbf{H_n}	\right\}
+\nonumber \\
+&\times P_{\boldsymbol{\theta}}\left\{	H_n \vert \mathbf{Y_{n-1}}, \mathbf{X_{n-1}}, \mathbf{H_{n-1}}		\right\}
+P_{\boldsymbol{\theta}}\left\{	\mathbf{Y_{n-1}}, \mathbf{X_{n-1}}, \mathbf{H_{n-1}}		\right\}.
+\end{align}
+We assume that given the dose used, an outcome does not depend on past outcomes and doses used for prior subjects, nor  does it depend on external mechanisms used to determine the dose.  We also assume that external mechanisms used to determine a dose, such as the flip of a biased coin, do not depend on the outcomes or the doses used.  Now  the likelihood (\ref{eq:LKgeneral}) reduces to
+\begin{align}
+\mathcal{L}_n
+&=P_{\boldsymbol{\theta}}\left\{ 	Y_n\vert X_n	\right\}
+P_{\boldsymbol{\theta}}\left\{	X_n\vert  Y_{n-1}, X_{n-1}, H_n	\right\}
+ P_{\boldsymbol{\theta}}\left\{	 H_n	\right\}
+P_{\boldsymbol{\theta}}\left\{	\mathbf{Y_{n-1}}, \mathbf{X_{n-1}}, \mathbf{H_{n-1}}		\right\}.
+\end{align}
+ Iterating the conditioning operations, and taking $\{  Y_{0}, X_{0}, H_1\}$ to be a null set, yields
+ \begin{align*}
+\mathcal{L}_n
+&=
+\prod_{i=1}^n P_{\boldsymbol{\theta}}\left\{ 	Y_i\vert X_i	\right\}
+P_{\boldsymbol{\theta}}\left\{	X_i\vert  Y_{i-1}, X_{i-1}, H_i	\right\}
+ P_{\boldsymbol{\theta}}\left\{	 H_i	\right\}.
+\end{align*}
+When $H_i$ results from flipping a coin with preset bias, its density will have no parameters in common with other events in the study.  More significantly, for BCD and many other UD designs, $H_i$ is independent of other events in the study, and inference can proceed ignoring it.
+
+Now consider $P_{\boldsymbol{\theta}}\left\{	X_i\vert  Y_{i-1}, X_{i-1}, H_i	\right\}$.  For BCD and many other UD designs, 
+$\{Y_{i-1}, X_{i-1}, H_i	\}$ completely determines $X_i$, so $P_{\boldsymbol{\theta}}\{Y_{i-1}, X_{i-1}, H_i	\}$ is degenerate and provides no information to the likelihood in addition to the other terms.  If we further assume that a fixed, non random, dose is assigned to the first subject, the remaining form of the likelihood is identical to that of independent responses conditioned on dose assignments:
+ \begin{align}\label{eq:LK}
+\mathcal{L}_n
+&\propto
+\prod_{i=1}^n P_{\boldsymbol{\theta}}\left\{ 	Y_i\vert X_i	\right\}=\prod_{i=1}^n [F(x_i)]^{Y_i} [1-F(x_i)]^{1-Y_i}\\
+&=\prod_{m=1}^M [F_m]^{\sum_{i=1}^n Y_i \textrm{I}\{X_i=d_m\}} [1-F_m]^{\sum_{i=1}^n (1-Y_i) \textrm{I}\{X_i=d_m\}}
+\end{align}
+where $\textrm{I}\{\cdot\}$ is the indicator function.
+
+\subsection{Maximum Likelihood Estimates}
+Maximum likelihood estimates restricted to be monotonic are the isotonic estimates described in section ..  Here we discuss the estimates without the restriction of monotonicity.
+
+First consider the parameters to be $\{F_1, \ldots, F_M\}$.  The derivative of the $i$th component of the log likelihood function is
+\begin{align}
+\frac{\partial \log P_{\boldsymbol{\theta}}\left\{ 	Y_i\vert X_i	\right\}}{\partial F_m}=\frac{Y_i-F_m}{F_m(1-F_m)}.
+\end{align}
+Summing over $i$ and setting the result equal to zero, yields the maximum likelihood estimates $$\widehat F_m=\frac{\sum_{i=1}^nY_i  \textrm{I}\{X_i=d_m\}}{\sum_{i=1}^n \textrm{I}\{X_i=d_m\}},\, \, 
+m=1,\ldots,M,$$
+which are the observed proportion of toxicities at each dose.
+
+Now let $F$ be a function of additional parameters, $\boldsymbol{\theta}$.
 
 
+\subsection{Asymptotic Normality of Maximum Likelihood Estimates}
 
+\subsection{Efficiency  with Respect to Optimal Designs}
+
+Parametric regression (usually logistic or probit) is occasionally encountered as a way to estimate $F^{-1}(\Gamma)$ following a UD experiment. Given the small sample size and the limited number of dose levels visited during a typical UD experiment, using parametric regression to estimate the dose-toxicity rate function $F$ is, generally speaking, inefficient.  This is because estimates of $F^{-1}(\Gamma)$ typically will be a function of a slope parameter, which requires allocations far from $F^{-1}(\Gamma)$ in order to be estimated efficiently \citep{Ford:Tors:Wu:use:1992}.  UD procedures, by design concentrating allocations around $F^{-1}(\Gamma)$, will typically result in relatively poor estimates  of a parametric slope parameter, even with moderately large sample sizes.
+
+provide theoretical comparison\\
+compare to using ud designs to estimate optimal design
+
+\section{Comparing Estimators}
+insert some examples here
 
 \chapter{Other Approaches to Dose--Finding}\label{sec:other}
 
@@ -1089,7 +1159,8 @@ Several methodological studies have found that `3+3's statistical properties are
 Interestingly, while statisticians are generally critical of this design, the `3+3' paradigm of \emph{selecting} a discrete dose from $\mathcal{X}$, in contrast to the universal UD practice of \emph{estimating} $F^{-1}(\Gamma)$ on a continuous dose scale, has been rather influential upon recent methodological approaches to Phase~I designs. The effect of this influence is described immediately below.
 
 \section{Long Memory Dose--Finding Designs}
-
+expand this.
+\subsection{Best Intention Designs}
 The overwhelming majority of recently-developed Phase~I designs belong to a class that \cite{Oron:Hoff:smal:2013} call \emph{``long-memory Phase~I designs''} (LMP1s). LMP1s calculate a regression estimate after each cohort, using results to select the MTD according to some design-specific optimization criterion, and then assigning this selection ($\widehat{MTD}$) to the next cohort. In contrast with UD designs, LMP1s potentially use \emph{all} previous observations in each dose allocation decision, rather than only the most recent ones. LMP1s might vary considerably in their external properties, but most share these two core principles:
 \begin{enumerate}
 \item Likelihood-based estimation (in the generic sense that includes Bayesian methods), and
@@ -1098,7 +1169,7 @@ The overwhelming majority of recently-developed Phase~I designs belong to a clas
 %\indent
 We now describe the allocation rule for the most commonly used LMP1, the one-parameter continual reassessment method  \citep{O'Qu:Pepe:Fish:cont:1990}.
 
-\subsection{The Continual Reassessment Method (CRM)}
+\subsubsection{The Continual Reassessment Method (CRM)}
 \begin{enumerate}
 \item Choose a \emph{parametric curve family} $\mathcal{G}\left(\theta,\boldsymbol{\phi}\right)$ to describe the dose-response relationship, where $\theta$ is a single parameter with a prior distribution and $\boldsymbol{\phi}$ is a vector of prior parameters. A single curve belonging to this family is denoted\ $G\left(x\mid\theta,\boldsymbol{\phi}\right)\in\mathcal{G}$.
 \item The experiment can start at any agreed-upon dose. Cohort size can vary \emph{ad lib}, even within the same experiment.
@@ -1120,22 +1191,32 @@ The only data-estimable parameter is $\theta$. It is accompanied by $M+2$ fixed,
 
 Another well-known LMP1 is the two-parameter Escalation With Overdose Control \citep[EWOC,][]{Babb:Roga:Roga:Zack:canc:1998}. Since 2008, Novartis has been widely implementing its own version of two-parameter LMP1s in Phase~I trials; their designs are based on EWOC and on \cite{Neunsch08}. A nonparametric LMP1 dubbed CCD was developed by \cite{Ivan:Flou:Chun:Cumu:2007}, and its convergence behavior was proven by \cite{oron:azri:hoff:dose:2011}. There are many dozens of other LMP1s, most of which have yet to be used in practice.
 
+\subsection{Adaptive Optimal Designs}
+sergei, dragalin, fedorov, pronzato \& pazman, Lane, Yao and Flournoy
+
+\subsection{Bayesian Optimal Designs}
+Rosenberger and Hines (truly update posterior)
+
 \section{Advantages and Drawbacks of Long--Memory Designs}
 
 Unlike for UD designs, when using a LMP1 design researchers do not have to commit to a fixed cohort size. Choosing a non-uniformly spaced $\mathcal{X}$ also does not carry as many consequences for estimation as with some estimators used with UD designs. But the main selling point of LMP1s has been their claimed asymptotic behavior -- together with the misconception that this behavior takes effect early, with small samples.
 
 Since LMP1s allocate the $\widehat{MTD}$ to future patients, and since they potentially use all available data for this estimation, as $n\to\infty$ they promise to allocate subjects \emph{exclusively} to the MTD. LMP1 method developers contrast this ostensibly razor-sharp asymptotic distribution with UD design's indefinite random walk, obviously recommending the former.
 
+\subsection{Problems with Convergence}
+add stuff from best intention paper:
+
 The problem with LMP1s lies in the gap between these promises and reality (\cite{Fedo:Flou:Wu:Zhang:Best:2011} recently called LMP1s \emph{``best-intention designs''}). Theoretical work in the past few years has shown that conditions under which the sequence of doses allocated using the CRM actually converges to an MTD-only distribution are fairly restrictive, and cannot be expanded any further \citep{Azri:anot:2012,Lee:Cheu:interv:calibr:2009,oron:azri:hoff:dose:2011}. Given a general form of $F$, the most that can be guaranteed with CRM is asymptotic exclusive allocation to a dose whose $F$ value is within some \emph{tolerance interval} in the vicinity of $\Gamma$.\footnote{If the interval is too narrow to contain any dose level, the asymptotic behavior slowly oscillates back and forth between the two levels straddling it.} The interval depends upon the ``skeleton'' $\boldsymbol{\phi}$, and is difficult to calculate by hand. \cite{Lee:Cheu:interv:calibr:2009} provide software that back-calculates the prior ``skeleton'' to match a user-specified tolerance interval. However, the nonparametric LMP1 mentioned above can guarantee the same type of convergence by using the interval width directly, with no need for a reverse-engineered model \citep{Ivan:Flou:Chun:Cumu:2007,oron:azri:hoff:dose:2011}.
 
 More generally, \cite{Azri:etal:imposs:2011} proved that no ``best-intention'' LMP1, parametric or nonparametric, can converge almost surely to MTD-only allocations without substantive restrictions on $F$. Many LMP1s, including the Novartis designs currently implemented in actual trials, have never had their asymptotic behavior proven.
 
+\subsection{Small Sample Characteristics}
 Further complicating matters is the commonly misunderstood issue of \emph{small-sample} LMP1 behavior. When compared in simulation on an equal footing, UD and LMP1 designs achieve rather similar success rates in selecting the true MTD from doses in $\mathcal{X}$ \citep{Oron:Hoff:smal:2013}. However, LMP1s often assign substantially more subjects to the MTD during the simulated experiment itself. Advocates for LMP1s have focused on this statistic, hereafter called $n^*$. For example, \cite{Rogat:etal:oped:2007} argued that the use of any non-LMP1 method \emph{``...implies needless loss of treatment efficacy and, possibly, lives''}, because LMP1s assign more patients to the true MTD. Simulated means of $n^*$ now regularly appear in new methodological Phase~I articles, presumably as an important quality metric.
 
 This metric is fundamentally debatable: Phase~I trials recruit volunteers under informed consent. A trial's main goal is to study a treatment's safety, not to ensure participants will get the optimal treatment combination. But the focus on $n^*$ is questionable for \emph{statistical} reasons as well.
 
 The statistic for $n^*$ reported in simulation studies is really an ensemble average of $n^*$, taken over a large number of simulated ``experiments'' under identical conditions. In real life, Phase~I trials are one-of-a-kind affairs. What about $n^*$'s run-to-run variability? \citep{Oron:Hoff:smal:2013} examined the entire \emph{ensemble distribution} of $n^*$. Typical results are shown in Figure~\ref{fig:nstar}, under three different forms of $F$. Each simulated `experiment' had 16 cohorts of size 2. Distributions of $n^*$ from CRM are on the left, a UD design (specifically, GUD$_{(2,0,1)}$) at center, and a CCD on the right. Both CRM and CCD targeted $\Gamma=0.3$, and were calibrated at settings recommended by their developers. All histograms use the same scale, and the first cohort was excluded.
-
+%
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics[scale=0.73]{nstar}
@@ -1150,6 +1231,10 @@ The importance of Figure~\ref{fig:nstar}'s message  should not be understated.  
 A thorough inspection of the phenomenon illustrated in Figure~\ref{fig:nstar} and its causes are beyond the scope of this chapter, but it can be easily confirmed and reproduced by anyone running a dose-finding simulation study. In any case, contrary to prevalent opinion in many circles, when all aspects are considered UD designs do in fact hold their own compared with the most sophisticated, cutting-edge LMP1s, even in  Phase~I cancer applications to which the latter are tailored. Some hybrid designs attempting to combine the advantages of UD and LMP1 designs, are in development \citep[Ch.~5]{Oron07}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION 5 STARTS HERE
+Parametric regression (usually logistic or probit) is occasionally encountered as a way to estimate $F^{-1}(\Gamma)$ following a UD experiment. Given the small sample size and the limited number of dose levels visited during a typical UD experiment, using parametric regression to estimate the dose-toxicity rate function $F$ is, generally speaking, inefficient.  This is because estimates of $F^{-1}(\Gamma)$ typically will be a function of a slope parameter, which requires allocations far from $F^{-1}(\Gamma)$ in order to be estimated efficiently \citep{Ford:Tors:Wu:use:1992}.  UD procedures, by design concentrating allocations around $F^{-1}(\Gamma)$, will typically result in relatively poor estimates  of a parametric slope parameter, even with moderately large sample sizes.
+
+\subsection{Toxicity Rates}
+compare distribution of total toxicity rates: exactly for UD designs and by simulation for CRM.  different senarios, different sample sizes.
 
 \chapter{Summary and Practical Recommendations}\label{sec:summary}
 
