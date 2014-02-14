@@ -12,71 +12,74 @@
 \contentsline {subsection}{\numberline {2.3.1}Calculating the Asymptotic Dose--Allocation Distribution for the Biased Coin and Classical Up--and--Down Designs}{14}
 \contentsline {subsection}{\numberline {2.3.2}Unimodality of the Asymptotic Dose--Allocation Distribution and its Relationship to the Balance Point}{14}
 \contentsline {subsection}{\numberline {2.3.3}Sharpness of the Asymptotic Dose--Allocation Distribution}{17}
-\contentsline {section}{\numberline {2.4}Characteristics of the Durham--Flournoy Biased Coin Design When the Dose--Toxicity Function is Logistic}{17}
-\contentsline {section}{\numberline {2.5}The Asymptotic Dose--Allocation Distribution}{17}
-\contentsline {subsection}{\numberline {2.5.1}Illustrations}{19}
-\contentsline {subsection}{\numberline {2.5.2}Proofs of Theorems\nobreakspace {}3\hbox {} and 4\hbox {}}{19}
+\contentsline {section}{\numberline {2.4}The Asymptotic Dose--Allocation Distribution of the Durham--Flournoy Biased Coin Design When the Dose--Toxicity Function is Logistic}{17}
+\contentsline {subsection}{\numberline {2.4.1}Illustrations}{19}
+\contentsline {subsection}{\numberline {2.4.2}Proofs of Theorems\nobreakspace {}3\hbox {} and 4\hbox {}}{19}
 \contentsline {subsubsection}{Proof of Theorem\nobreakspace {}3\hbox {}}{19}
 \contentsline {subsubsection}{Proof of Theorem\nobreakspace {}4\hbox {}}{20}
-\contentsline {section}{\numberline {2.6}Up--and--Down Convergence}{21}
-\contentsline {subsection}{\numberline {2.6.1}Convergence of the Dose\nobreakspace {}Allocation Process to Stationary Behavior}{21}
-\contentsline {subsection}{\numberline {2.6.2}A Law of Large Numbers for the Empirical Allocation Frequencies}{23}
-\contentsline {subsection}{\numberline {2.6.3}A Central Limit Theorem for the Empirical Allocation Frequencies}{23}
-\contentsline {section}{\numberline {2.7}Estimating a Quantile of the Dose--Toxicity Function}{24}
-\contentsline {subsection}{\numberline {2.7.1}Reversal--Averaging Estimators}{25}
-\contentsline {subsection}{\numberline {2.7.2}Isotonic--Regression Based Estimators}{25}
+\contentsline {section}{\numberline {2.5}Up--and--Down Convergence}{21}
+\contentsline {subsection}{\numberline {2.5.1}Convergence of the Dose\nobreakspace {}Allocation Process to Stationary Behavior}{21}
+\contentsline {subsection}{\numberline {2.5.2}A Law of Large Numbers for the Empirical Allocation Frequencies}{23}
+\contentsline {subsection}{\numberline {2.5.3}A Central Limit Theorem for the Empirical Allocation Frequencies}{23}
+\contentsline {subsection}{\numberline {2.5.4}A Law of Large Numbers for the Observed Toxicity Rates}{25}
+\contentsline {subsection}{\numberline {2.5.5}A Central Limit Theorem for the Observed Toxicity Rates}{25}
+\contentsline {section}{\numberline {2.6}A Brief Look at Estimating a Quantile of the Dose--Toxicity Function}{25}
+\contentsline {subsection}{\numberline {2.6.1}Reversal--Averaging Estimators}{25}
+\contentsline {subsection}{\numberline {2.6.2}Isotonic--Regression Based Estimators}{26}
 \contentsline {chapter}{\numberline {3}Exact Statistics for First Order Up--and--Down Designs}{29}
-\contentsline {section}{\numberline {3.1}Exact Moments of the Dose Allocation Frequencies}{29}
-\contentsline {subsection}{\numberline {3.1.1}Expected Dose Allocation Frequencies}{29}
+\contentsline {section}{\numberline {3.1}Exact Moments of the Dose--Allocation Frequencies}{29}
+\contentsline {subsection}{\numberline {3.1.1}Expected Dose--Allocation Frequencies}{29}
 \contentsline {subsection}{\numberline {3.1.2}A Recursion Algorithm for Updating Expected Allocation Frequencies after Making Observations on a New Subject}{30}
-\contentsline {subsection}{\numberline {3.1.3}The Variance of a Dose Allocation Frequency}{31}
+\contentsline {subsection}{\numberline {3.1.3}The Variance of a Dose--Allocation Frequency}{31}
 \contentsline {subsection}{\numberline {3.1.4}First Allocation and Mean Recurrence Times}{31}
 \contentsline {subsection}{\numberline {3.1.5} A Graphical Tool for Determining when {\em n} is Large Enough for Asymptotic Approximations}{32}
 \contentsline {subsection}{\numberline {3.1.6}Covariances between Dose--Allocation Frequencies at Different Dose Levels}{33}
-\contentsline {section}{\numberline {3.2}Moments of the Empirical Toxicity Frequencies}{36}
+\contentsline {section}{\numberline {3.2}Exact Moments of the Empirical Toxicity Frequencies}{36}
 \contentsline {subsection}{\numberline {3.2.1}First and Second Moments of a Single Toxic Response}{36}
 \contentsline {subsection}{\numberline {3.2.2}Exact First and Second Moments of the Total Number of Toxicities}{37}
 \contentsline {section}{\numberline {3.3}Proofs of Theorems ....}{37}
 \contentsline {chapter}{\numberline {4}Higher-Order Up--and--Down Designs and Other Extensions}{39}
 \contentsline {section}{\numberline {4.1}Group Up--and--Down Designs}{40}
 \contentsline {section}{\numberline {4.2}The $k$--in--a--row (``Geometric'') Design}{41}
+\contentsline {subsection}{\numberline {4.2.1}Proofs}{44}
 \contentsline {section}{\numberline {4.3}Biased Coin Design Extensions}{44}
 \contentsline {subsection}{\numberline {4.3.1}A Generalized Biased Coin Design}{44}
 \contentsline {subsection}{\numberline {4.3.2}Integrated Parallel Biased Coin Design Sequences}{45}
 \contentsline {subsection}{\numberline {4.3.3}Using Biased Coin Designs to Approximate Optimal Designs}{46}
 \contentsline {section}{\numberline {4.4}A Second Order Biased Coin Design}{46}
 \contentsline {subsection}{\numberline {4.4.1}A Generalized Group Up--and--Down Design}{46}
+\contentsline {section}{\numberline {4.5}U--and---Down Designs for Ordinal Responses}{46}
 \contentsline {chapter}{\numberline {5}Comparing Up--and--Down Designs}{47}
 \contentsline {section}{\numberline {5.1}Convergence Rates}{47}
-\contentsline {subsubsection}{``Peakedness'' of the Asymptotic Dose--Allocation Distribution}{48}
-\contentsline {chapter}{\numberline {6}Up--and--Down Designs for Joint Studies of Toxicity and Efficacy }{51}
-\contentsline {section}{\numberline {6.1}A Discretized Keifer-Wolferwitz Procedure}{52}
+\contentsline {subsection}{\numberline {5.1.1}``Peakedness'' of the Asymptotic Dose--Allocation Distribution}{48}
+\contentsline {chapter}{\numberline {6}Studies of Toxicity and Efficacy }{51}
+\contentsline {section}{\numberline {6.1}A Discretized Keifer-Wolferwitz Procedure}{51}
 \contentsline {subsection}{\numberline {6.1.1}Effect of the Starting Dose}{52}
 \contentsline {subsection}{\numberline {6.1.2}Variations on the Basic Procedure}{52}
-\contentsline {section}{\numberline {6.2}Going Down after a Toxicity and Going Up after an Efficacious Outcome}{53}
-\contentsline {section}{\numberline {6.3}Others?}{53}
-\contentsline {chapter}{\numberline {7}Estimation Following an Up--and--Down Design}{55}
-\contentsline {section}{\numberline {7.1}Ancillarity of an Up--and--Down Design}{56}
-\contentsline {section}{\numberline {7.2}Dose--Averaging Estimators}{56}
-\contentsline {subsection}{\numberline {7.2.1}The Case Against Reversal--Only Estimators}{57}
-\contentsline {subsection}{\numberline {7.2.2}Alternative Solutions for Averaging Estimators}{58}
-\contentsline {section}{\numberline {7.3}Isotonic Regression Based Estimators}{59}
-\contentsline {section}{\numberline {7.4}Estimation from Parametric Models}{60}
-\contentsline {subsection}{\numberline {7.4.1}Ancillarity of Up--and--Down Designs}{61}
-\contentsline {subsection}{\numberline {7.4.2}Maximum Likelihood Estimates}{62}
-\contentsline {subsection}{\numberline {7.4.3}Asymptotic Normality of Maximum Likelihood Estimates}{62}
-\contentsline {subsection}{\numberline {7.4.4}Efficiency with Respect to Optimal Designs}{62}
-\contentsline {section}{\numberline {7.5}Comparing Estimators}{63}
-\contentsline {chapter}{\numberline {8}Other Approaches to Dose--Finding}{65}
-\contentsline {section}{\numberline {8.1}The 3+3 Rule (\emph {precise origins unknown})}{65}
-\contentsline {section}{\numberline {8.2}Long Memory Dose--Finding Designs}{67}
-\contentsline {subsection}{\numberline {8.2.1}Best Intention Designs}{67}
-\contentsline {subsubsection}{The Continual Reassessment Method (CRM)}{67}
-\contentsline {subsection}{\numberline {8.2.2}Adaptive Optimal Designs}{69}
-\contentsline {subsection}{\numberline {8.2.3}Bayesian Optimal Designs}{69}
-\contentsline {section}{\numberline {8.3}Advantages and Drawbacks of Long--Memory Designs}{69}
-\contentsline {subsection}{\numberline {8.3.1}Problems with Convergence}{70}
-\contentsline {subsection}{\numberline {8.3.2}Small Sample Characteristics}{70}
-\contentsline {subsection}{\numberline {8.3.3}Toxicity Rates}{73}
-\contentsline {chapter}{\numberline {9}Summary and Practical Recommendations}{75}
-\contentsline {chapter}{\numberline {10}Historical Notes}{79}
+\contentsline {section}{\numberline {6.2}Going Down after a Toxicity and Going Up after an Efficacious Outcome}{52}
+\contentsline {section}{\numberline {6.3}Others?}{52}
+\contentsline {chapter}{\numberline {7}Estimation Following an Up--and--Down Design}{53}
+\contentsline {section}{\numberline {7.1}Dose--Averaging Estimators}{54}
+\contentsline {subsection}{\numberline {7.1.1}The Case Against Reversal--Only Estimators}{55}
+\contentsline {subsection}{\numberline {7.1.2}Alternative Solutions for Averaging Estimators}{56}
+\contentsline {section}{\numberline {7.2}Isotonic Regression Based Estimators}{57}
+\contentsline {section}{\numberline {7.3}Estimation from Parametric Models}{58}
+\contentsline {subsection}{\numberline {7.3.1}Ancillarity of Up--and--Down Designs}{59}
+\contentsline {subsection}{\numberline {7.3.2}Maximum Likelihood Estimates}{60}
+\contentsline {subsection}{\numberline {7.3.3}Asymptotic Normality of Maximum Likelihood Estimates}{61}
+\contentsline {subsubsection}{Logistic Regression Estimates}{61}
+\contentsline {subsection}{\numberline {7.3.4}Efficiency with Respect to (Non-attainable) Optimal Designs}{61}
+\contentsline {section}{\numberline {7.4}Comparing Estimators}{62}
+\contentsline {chapter}{\numberline {8}Other Approaches to Dose--Finding}{63}
+\contentsline {section}{\numberline {8.1}The 3+3 Rule (\emph {precise origins unknown})}{63}
+\contentsline {section}{\numberline {8.2}Long Memory Dose--Finding Designs}{65}
+\contentsline {subsection}{\numberline {8.2.1}Best Intention Designs}{65}
+\contentsline {subsubsection}{The Continual Reassessment Method (CRM)}{65}
+\contentsline {subsection}{\numberline {8.2.2}Adaptive Optimal Designs}{67}
+\contentsline {subsection}{\numberline {8.2.3}Bayesian Optimal Designs}{67}
+\contentsline {section}{\numberline {8.3}Advantages and Drawbacks of Long--Memory Designs}{67}
+\contentsline {subsection}{\numberline {8.3.1}Problems with Convergence}{68}
+\contentsline {subsection}{\numberline {8.3.2}Small Sample Characteristics}{68}
+\contentsline {subsection}{\numberline {8.3.3}Toxicity Rates}{71}
+\contentsline {chapter}{\numberline {9}Summary and Practical Recommendations}{73}
+\contentsline {chapter}{\numberline {10}Historical Notes}{77}

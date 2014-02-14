@@ -293,13 +293,12 @@ For the BCD, the mode is not necessarily the dose closest to the target. Let $x^
 The unimodality of $\boldsymbol{\pi}$ helps concentrate information collection around $x^*$. It is also of practical interest to know how steeply $\boldsymbol{\pi}$ decreases to either side of its mode, in order to know the degree of this concentration and the frequency of excursions away from $x^*$. Assume without loss of generality, that the mode is at a single interior level $d_{m^*}$. Due to monotonicity conditions, we know that $\lambda_{m^*-1}>1$ and $\lambda_{m^*}<1$. If the adjacent-level ratios remained constant at these values on either side of the mode, then the rate of decrease in $\boldsymbol{\pi}$ values away from the mode would be geometric -- the discrete analogue of exponentially-decreasing tails. However, due to their monotonicity, the $\lambda$'s become \emph{more} extreme as one moves away from the mode. Hence, the drop in asymptotic allocation frequencies away from $\boldsymbol{\pi}$'s mode is faster than geometric for UD designs.
 
 
-\section{Characteristics of the Durham--Flournoy Biased Coin Design When the Dose--Toxicity Function is Logistic}\label{sec:logistic}
-\section{The Asymptotic Dose--Allocation Distribution}
+\section{The Asymptotic Dose--Allocation Distribution of the Durham--Flournoy Biased Coin Design When the Dose--Toxicity Function is Logistic}\label{sec:logistic}
 \cite{Durh:Flou:rand:1994} obtained a valuable result (shown in Theorem~\ref{thm:discnormal} below) regarding the form of the BCD's $\boldsymbol{\pi}$ and the steepness of this decrease away from the mode. This result requires the following definition:
 \begin{defn}
 Let $Z$ be a random variable that is defined on a set of discrete
 real valued points $\mathcal{X}$.  Let $\tilde{\Phi}(z)$ denote $P\{Z=z\}$.  Then $Z$ is said to have a \emph{Discrete Normal Distribution} if
-\begin{equation*}
+\begin{equation*}f
 \tilde{\Phi}(z_j)=\frac{e^{-\frac{1}{2}z_j^2}}{\sum_{i=1}^Me^{-\frac{1}{2}z_i^2}},\,\,\,z_j\in\mathcal{X}.
 \end{equation*}
 \end{defn}
@@ -447,7 +446,11 @@ The rate of convergence is of order $\mathrm{O}\left(1/\sqrt{n}\right)$ -- the u
 
 Note: from a practical perspective, choosing a design with smaller asymptotic variances $\left(\sigma_1^2(\mathbf{P}),\ldots,\sigma_M^2(\mathbf{P})\right)$ is equivalent to increasing the scaling constant of the convergence rate, i.e., accelerating the convergence. Both will help $\mathbf{W}(n)$ achieve a pre-specified precision threshold with fewer subjects. However, the overall root-$n$ convergence rate cannot be changed, and it is far slower than the convergence of the dose-allocation process itself to stationary behavior.
 
-\section{Estimating a Quantile of the Dose--Toxicity Function}
+\subsection{A Law of Large Numbers for the Observed Toxicity Rates}
+
+\subsection{A Central Limit Theorem for the Observed Toxicity Rates}
+
+\section{A Brief Look at Estimating a Quantile of the Dose--Toxicity Function}
 
 More often than not, estimation of UD experiments has been approached inconsistently by both applied and methodological researchers. Many researchers use outdated and questionable estimators of $F^{-1}(\Gamma)$, just because these estimators happen to be prevalent in their field. Many method developers illogically produce  UD estimates  in the same way as estimates from an entirely different class of dose-finding designs \cite[e.g.,][]{Zack:stag:2009}. To help alleviate the confusion, Section~\ref{sec:est} is dedicated mostly to UD estimation. Right now, a brief description is provided for two  estimators of $F^{-1}(\Gamma)$: the one most commonly used for the classical UD design, and a more recent estimator considered as standard for the BCD and recommended for all UD designs.
 
@@ -487,9 +490,9 @@ for each of the randomly-generated scenarios of Figure~\ref{fig:traject} and for
 
 \chapter{Exact Statistics for First Order Up--and--Down Designs}
 
-\section{Exact Moments of the Dose Allocation Frequencies}
+\section{Exact Moments of the Dose--Allocation Frequencies}
 
-\subsection{Expected Dose Allocation Frequencies}\label{sec:trialfrequencies}
+\subsection{Expected Dose--Allocation Frequencies}\label{sec:trialfrequencies}
 After $n$ subjects have been put on trial, the proportion of subjects treated at each dose $k=1,\ldots,K$ is $W_k(n)=n^{-1}\sum_{m=1}^n\textrm{I}(X_m=d_k)$.
 %
 The set of first moments, $\{\mathrm{E}[W_k(n)]\}_{k=1}^K$, gives the expected allocation distribution; second moments permit the construction of confidence intervals of the allocation frequencies at each dose.  Functions of the moments, such that the expected number of subjects treated at a high dose level, are discussed later.
@@ -542,7 +545,7 @@ n\tilde{\mathbf{w}}(n)&=\bf{I}+\mathbf{P}\tilde{\mathbf{w}}(n-2)
 \end{align*}
 where $\mathbf{I}$ is the identity matrix.
 
-\subsection{The Variance of a Dose Allocation Frequency}\label{sec:allocationvariances}
+\subsection{The Variance of a Dose--Allocation Frequency}\label{sec:allocationvariances}
 We show in section (\ref{sec:allocationcov}) that  when $X_1$ is
 fixed at $d_i$, the variance of the dose-allocation frequency at level $k$, after the $n$th allocation,   is given by
 \begin{align*}
@@ -568,7 +571,7 @@ Given a subject is allocated to dose  $d_k$, the recurrence time  is the number 
 
 Suppose a subject has just been allocated to dose $d_k$, and let  $m_{kl}$ denote the mean number of subjects allocated until dose $d_k$ is allocated again.
 Then $$m_{kl}=\frac{z_{jj}-z_{ij}}{\pi_j},\, k\ne l.$$
-Suppose again that a subject has just been allocated to dose $d_k$, and let $r_k$ denote the mean number of subjects is takes for the dose allocation process to return to dose $d_k$.  Then $$r_k=\frac{1}{\pi_k}. $$
+Suppose again that a subject has just been allocated to dose $d_k$, and let $r_k$ denote the mean number of subjects is takes for the dose--allocation process to return to dose $d_k$.  Then $$r_k=\frac{1}{\pi_k}. $$
 {See Chapter 11, Theorems 11.15 and 11.6}\cite{Grin:Snel:Intr:1997}.
 
 {bf give example of analyzing the effect of starting at lowest dose, perhaps for different densities of dose levels and/or different slopes of F}
@@ -717,7 +720,7 @@ sample approximation in (\ref{c_kl}) is suitable in that the
 number of trials required can be read off from where a plot of the
 increment versus $n$ approaches a constant.
 
-\section{Moments of the Empirical Toxicity Frequencies}
+\section{Exact Moments of the Empirical Toxicity Frequencies}
 
 \subsection{First and Second Moments of a Single Toxic Response}
 As said before, conditional on allocation to dose $x_k$, the probability of a toxic response is $P_i(Y_n=1|d_x)=F(d_k)$ for all $n$ independent of the starting dose $d_i$; and the conditional variance of $Y_n$ is
@@ -888,6 +891,7 @@ Now, the balance equation between $d_m$ and $d_{m+1}$ is
 %
 This ratio is monotone decreasing in $m$, conforming to the Durham-Flournoy conditions
 (see Section~\ref{sec:balpoint}). The $k$--in--a--row balance point can now be calculated; indeed, it is the one found by Wetherill~(\ref{eq:krtarget}). It is also identical to the balance point of GUD$_{(k,0,1)}$. The same unimodality and mode-location properties with respect to $x^*$ shown for $\boldsymbol{\pi}$ of the classical UD design and the BCD, hold for $k$--in--a--row as well \citep{Oron:Hoff:thek:2009}.\footnote{The derivation of (\ref{eq:krgamma}) assumes stationarity. For finite $n$, the marginal transition probabilities are very cumbersome to calculate; it is for the $k$--in--a--row design that the $n\to\infty$ limit terminology is needed in Definition~\ref{def:pxqx}.}
+\subsection{Proofs}
 
 \section{Biased Coin Design Extensions}
 
@@ -931,7 +935,10 @@ d_m &\textrm{otherwise.}
 Bortot and Giovagnoli derived $\boldsymbol{\pi}$, and showed that it is unimodal by the Durham--Flournoy conditions (see Sec.~\ref{sec:balpoint}) and if $(1-\Gamma )b_1+\Gamma b_2=\Gamma /(1-\Gamma )$. However, their simulations indicate only a modest estimation performance improvement over the first-order BCD.
 
 \subsection{A Generalized Group Up--and--Down Design}
-\cite{Bald:Bort:Giov:2008} generalized the group UD design for any user-specified toxicity rate $\Gamma$ by adding a biased coin to the dose allocation procedure.
+\cite{Bald:Bort:Giov:2008} generalized the group UD design for any user-specified toxicity rate $\Gamma$ by adding a biased coin to the dose--allocation procedure.
+
+\section{Up--and---Down Designs for Ordinal Responses}
+cite Rosenberger, student and Flournoy
 
 \chapter{Comparing Up--and--Down Designs}
 
@@ -953,7 +960,7 @@ With several UD variants to choose from for estimating a given quantile, some wa
 %
 \noindent The proof appears in \cite{Oron:Hoff:thek:2009}. In simulations, $k$--in--a--row also held a pervasive and even larger advantage over a BCD with the same $x^*$. BCD designs took $10\%-70\%$ more subjects than $k$--in--a--row to reach the ``$99\%$ stationary'' benchmark defined in Section~\ref{sec:geom} \citep{Oron:Hoff:thek:2009}. However, this numerical advantage over BCD was not theoretically proven.
 
-\subsubsection{``Peakedness'' of the Asymptotic Dose--Allocation Distribution}
+\subsection{``Peakedness'' of the Asymptotic Dose--Allocation Distribution}
 
 \cite{Giov:Pint:Pint:prop:1998} introduced the concept of ``peakedness'' as an easy-to-analyze measure of precision for discrete unimodal distributions of the type generated by UD designs.
 %
@@ -979,7 +986,7 @@ For comparing the `peakedness' of UD design families, \cite{Oron:Hoff:thek:2009}
 \noindent (ii) \ For a $k$--in--a--row design and a GUD$_{(k,0,1)}$ with the same $k$, neither design's $\boldsymbol{\pi}$ can be said to be consistently more peaked than the other.
 \end{thm}
 
-\chapter{Up--and--Down Designs for Joint Studies of Toxicity and Efficacy }
+\chapter{Studies of Toxicity and Efficacy }
 
 Most dose-finding experiments focus upon toxicity only, or efficacy only. For these goals, the assumption of a monotone increasing dose-response function $F(x)$ or a monotonically decreasing dose-efficacy function $R(x)$ is usually adequate.
 One approach for experiments involving both toxicity and efficacy is to dichotomize observations into two binary responses per subject, one each for toxicity and efficacy. They can be modeled via a pair of monotone-increasing functions: the dose-toxicity rate function $F(x)$ and the dose-efficacy rate function $R(x)$.
@@ -1006,7 +1013,6 @@ For example, numerous environmental toxicity studies \citep{Lich:updo:1998,Sund:
 
 Another example of a misinformed and very poor estimator is the use of the UD design's last allocation $X_n$, or the last allocation-recommendation $X_{n+1}$.  Methodologists comparing UD designs with procedures for which the last allocation is a reasonable estimate (see Section~\ref{sec:other} for such designs) sometimes assume that this estimator is sensible for UD designs as well \citep{O'Qu:Chev:meth:1991,Zack:stag:2009}. But using an arbitrary allocation from a random walk as an estimator of anything makes no sense. Needless to say, the UD design does not perform well in such misguided comparisons.
 
-\section{Ancillarity of an Up--and--Down Design}
 
 \section{Dose--Averaging Estimators}\label{sec:averaging}
 
@@ -1106,12 +1112,31 @@ Summing over $i$ and setting the result equal to zero, yields the maximum likeli
 m=1,\ldots,M,$$
 which are the observed proportion of toxicities at each dose.
 
-Now let $F$ be a function of additional parameters, $\boldsymbol{\theta}$.
+Now let $F$ be a function of parameters $\boldsymbol{\theta}$.
 
 
 \subsection{Asymptotic Normality of Maximum Likelihood Estimates}
+\begin{equation}
+n^{1/2}\left(
+(\widehat F_1,\ldots,
+  \widehat F_M)\right) -\left(
+F_1.\ldots, F_M \right)
+\longrightarrow \mathcal{N}\left((0\cdots0),\left(\begin{array}{cccc}
+\frac{F_1(1-F_1)}{\pi_1}&0& \cdots&0 \\ 
+  0&\ddots&\ddots & 0 \\ 
+ 0&  \cdots & 0& \frac{F_M(1-F_M)} {\pi_M}\\ 
+\end{array}\right)\right)
+\end{equation}
 
-\subsection{Efficiency  with Respect to Optimal Designs}
+\subsubsection{Logistic Regression Estimates}
+Suppose $$F_m=1-\left(1+\exp\left\{\frac{d_m-\alpha}{\beta}\right\}\right)^{-1}.$$
+Then the maximum likelihood estimate of the target quantile is $\widehat x^* =\widehat\beta F^{-1}(\Gamma)+\widehat\alpha$, where $\boldsymbol{\theta}=(\alpha,\beta)$ and $\widehat{ \boldsymbol{\theta}}$ are maximum likelihood estimates of $\boldsymbol{\theta}$.  The usual approximation to the asymptotic variance from Fisher's information suggests the following estimator of the variance of $\widehat x^*$:
+\begin{equation}
+\widehat{\textrm{Var}}\left[\widehat x^*\right]=\frac{\widehat\beta^2\sum_{m=1}^{M} N_i(n)\widehat{F}_m(1-\widehat{F}_m)(d_m-\widehat x^*)}{\sum_{m<m'}N_m(n)N_{m'}(n)\widehat{F}_m(1-\widehat{F}_m)\widehat{F}_{m'}(1-\widehat{F}_{m'})(d_m-d_{m'})^2},
+\end{equation}
+where $N_i(n)$ denotes the number of subjects allocated to $d_m$ after $n$ subjects have been allocated.
+
+\subsection{Efficiency  with Respect to (Non-attainable) Optimal Designs}
 
 Parametric regression (usually logistic or probit) is occasionally encountered as a way to estimate $F^{-1}(\Gamma)$ following a UD experiment. Given the small sample size and the limited number of dose levels visited during a typical UD experiment, using parametric regression to estimate the dose-toxicity rate function $F$ is, generally speaking, inefficient.  This is because estimates of $F^{-1}(\Gamma)$ typically will be a function of a slope parameter, which requires allocations far from $F^{-1}(\Gamma)$ in order to be estimated efficiently \citep{Ford:Tors:Wu:use:1992}.  UD procedures, by design concentrating allocations around $F^{-1}(\Gamma)$, will typically result in relatively poor estimates  of a parametric slope parameter, even with moderately large sample sizes.
 
@@ -1161,7 +1186,7 @@ Interestingly, while statisticians are generally critical of this design, the `3
 \section{Long Memory Dose--Finding Designs}
 expand this.
 \subsection{Best Intention Designs}
-The overwhelming majority of recently-developed Phase~I designs belong to a class that \cite{Oron:Hoff:smal:2013} call \emph{``long-memory Phase~I designs''} (LMP1s). LMP1s calculate a regression estimate after each cohort, using results to select the MTD according to some design-specific optimization criterion, and then assigning this selection ($\widehat{MTD}$) to the next cohort. In contrast with UD designs, LMP1s potentially use \emph{all} previous observations in each dose allocation decision, rather than only the most recent ones. LMP1s might vary considerably in their external properties, but most share these two core principles:
+The overwhelming majority of recently-developed Phase~I designs belong to a class that \cite{Oron:Hoff:smal:2013} call \emph{``long-memory Phase~I designs''} (LMP1s). LMP1s calculate a regression estimate after each cohort, using results to select the MTD according to some design-specific optimization criterion, and then assigning this selection ($\widehat{MTD}$) to the next cohort. In contrast with UD designs, LMP1s potentially use \emph{all} previous observations in each dose--allocation decision, rather than only the most recent ones. LMP1s might vary considerably in their external properties, but most share these two core principles:
 \begin{enumerate}
 \item Likelihood-based estimation (in the generic sense that includes Bayesian methods), and
 \item Assigning  $\widehat{MTD}$ to the next cohort.
